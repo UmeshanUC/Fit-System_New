@@ -1,0 +1,2 @@
+INSERT INTO [dbo].[People] ([NIC], [Name], [WorkRoleID], [Email], [Gender], [Address], [JoinedDate], [Telephone], [Pic], [TodayPresence]) VALUES (N'1111', N'Umeshan', 0, N'UmeshanUC@outlook.com', N'male', N'Umeshan', N'2015-12-11 00:00:00', 1111, N'1111', 0)
+INSERT INTO [dbo].[People] ([NIC], [Name], [WorkRoleID], [Email], [Gender], [Address], [JoinedDate], [Telephone], [Pic], [TodayPresence]) VALUES (N'sssss', N'ssss', 0, N'sss', N'ssss', N'sss', N'2021-12-05 00:00:00', 0, NULL, 0)

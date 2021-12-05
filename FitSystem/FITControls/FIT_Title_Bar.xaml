@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="FITSystem.FITControls.FitTitleBar"
+             x:Name="_FIT_Title_Bar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FITSystem.FITControls"
+             xmlns:Controls="clr-namespace:FITSystem.FITControls"
+             mc:Ignorable="d" d:DesignWidth="1618.691" Height="40" >
+    <Border CornerRadius="0 0 0 0" RenderTransformOrigin="0.5,0.5" Background="#FF1B1B20">
+        <Grid Margin="0">
+            <Grid VerticalAlignment="Center" Margin="5 10 10 5" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="30"/>
+                </Grid.ColumnDefinitions>
+
+                <DockPanel Grid.Column="0" Margin="20 0">
+                    <TextBlock Text="Title" Style="{StaticResource H1}"/>
+                </DockPanel>
+
+                <DockPanel Grid.Column="1">
+                    <Controls:MenuBar Margin="10 0 0 0"/>
+                </DockPanel>
+
+                <Button Margin="0" BorderBrush="Transparent"  Grid.Column="2"
+                        Padding="-3" VerticalAlignment="Center" FontWeight="Bold" FontSize="18" Click="Button_Click"
+                        Background="#7b2f39">
+                    <Image Source="/icons/window-close-solid.png"/>
+                </Button>
+
+
+            </Grid>
+
+        </Grid>
+    </Border>
+</UserControl>
