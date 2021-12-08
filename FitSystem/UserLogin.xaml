@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FITSystem"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
-        x:Class="FITSystem.UserLogin"
+        x:Class="FITSystem.UserLogin" WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
-        Title="User Login" Width="288.346" ResizeMode="CanMinimize" SizeToContent="Height" WindowStartupLocation="CenterScreen"
+        Title="User Login" Width="288.346" ResizeMode="CanMinimize" SizeToContent="Height"
         WindowStyle="None" Height="241.653" 
         AllowsTransparency="True" Background="Transparent" BorderBrush="Transparent" >
     <Window.Resources>

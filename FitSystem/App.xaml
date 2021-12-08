@@ -2,7 +2,7 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:FitSystem"
-             StartupUri="UserLogin.xaml">
+             StartupUri="AddPerson.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -89,7 +89,7 @@
             <Style x:Key="H2_stackVertical" TargetType="TextBlock">
                 <Setter Property="Margin" Value="0 1 0 20"/>
                 <Setter Property="Foreground" Value="#FFB1B1B1"/>
-                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="FontSize" Value="14"/>
                 <Setter Property="Padding" Value="5"/>
                 <Setter Property="FontWeight" Value="Bold"/>
                 <Setter Property="FontFamily" Value="Arial"/>
@@ -100,21 +100,21 @@
                 <Setter Property="Margin" Value="0 0 0 20"/>
                 <Setter Property="Padding" Value="5"/>
                 <Setter Property="Foreground" Value="#FFD3C7C7"/>
-                <Setter Property="Background" Value="#3FB1B1B1"/>
+                <Setter Property="Background" Value="{x:Null}"/>
                 <Setter Property="BorderBrush" Value="#FF636363"/>
-                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="FontSize" Value="14"/>
                 <Setter Property="FontWeight" Value="Bold"/>
                 <Setter Property="FontFamily" Value="Arial"/>
             </Style>
 
-            <!--Heading 2 Vertically Stacking TextBox Style-->
+            <!--Heading 2 Vertically Stacking Conbo Style-->
             <Style x:Key="Combo_stackVertical" TargetType="ComboBox">
                 <Setter Property="Margin" Value="0 0 0 20"/>
                 <Setter Property="Padding" Value="5"/>
                 <Setter Property="Foreground" Value="#FFD3C7C7"/>
                 <Setter Property="Background" Value="#3FB1B1B1"/>
                 <Setter Property="BorderBrush" Value="#FF636363"/>
-                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="FontSize" Value="14"/>
                 <Setter Property="FontWeight" Value="Bold"/>
                 <Setter Property="FontFamily" Value="Arial"/>
             </Style>
@@ -122,11 +122,10 @@
             <!--Heading 2 Vertically Stacking DTPick Style-->
             <Style x:Key="DTPick_stackVertical" TargetType="DatePicker">
                 <Setter Property="Margin" Value="0 0 0 20"/>
-                <Setter Property="Padding" Value="10"/>
                 <Setter Property="Foreground" Value="#FFD3C7C7"/>
                 <Setter Property="Background" Value="#3FB1B1B1"/>
                 <Setter Property="BorderBrush" Value="#FF636363"/>
-                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="FontSize" Value="14"/>
                 <Setter Property="FontWeight" Value="Bold"/>
                 <Setter Property="FontFamily" Value="Arial"/>
             </Style>

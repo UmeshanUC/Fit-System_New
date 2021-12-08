@@ -86,6 +86,9 @@
     <Compile Include="Email.xaml.cs">
       <DependentUpon>Email.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FITControls\AddEmpExtender.xaml.cs">
+      <DependentUpon>AddEmpExtender.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FITPages\Dash_finance.xaml.cs">
       <DependentUpon>Dash_finance.xaml</DependentUpon>
     </Compile>
@@ -122,6 +125,10 @@
     <Page Include="Email.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FITControls\AddEmpExtender.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="FITControls\DetailCard.xaml">
       <Generator>MSBuild:Compile</Generator>

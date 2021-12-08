@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:Controls="clr-namespace:FITSystem.FITControls"
         xmlns:local="clr-namespace:FITSystem"
-        mc:Ignorable="d"
+        xmlns:localUC="clr-namespace:FitSystem.FITControls"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
         
         Style="{StaticResource DefWindow}" 
         Title="AddPerson" Height="835" Width="1445">
@@ -54,46 +55,63 @@
                                     <RowDefinition Height="*"/>
                                     <RowDefinition Height="40"/>
                                 </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="1*"/>
-                                </Grid.ColumnDefinitions>
 
-                                <StackPanel Grid.Column="0">
-                                    <TextBlock Text="NIC" Style="{StaticResource H2_stackVertical}"/>
-                                    <TextBlock Text="Name" Style="{StaticResource H2_stackVertical}"/>
-                                    <TextBlock Text="Role" Style="{StaticResource H2_stackVertical}"/>
-                                    <TextBlock Text="Email" Style="{StaticResource H2_stackVertical}"/>
-                                    <TextBlock Text="Gender" Style="{StaticResource H2_stackVertical}"/>
-                                    <TextBlock Text="Address" Style="{StaticResource H2_stackVertical}"/>
-                                    <TextBlock Text="Telephone" Style="{StaticResource H2_stackVertical}"/>
-                                    <TextBlock Text="Joined Date" Style="{StaticResource H2_stackVertical}"/>
-                                </StackPanel>
 
-                                <StackPanel Grid.Column="1" Margin="10 0 0 0">
-                                    <TextBlock Text=":" Style="{StaticResource H2_stackVertical}"/>
-                                    <TextBlock Text=":" Style="{StaticResource H2_stackVertical}"/>
-                                    <TextBlock Text=":" Style="{StaticResource H2_stackVertical}"/>
-                                    <TextBlock Text=":" Style="{StaticResource H2_stackVertical}"/>
-                                    <TextBlock Text=":" Style="{StaticResource H2_stackVertical}"/>
-                                    <TextBlock Text=":" Style="{StaticResource H2_stackVertical}"/>
-                                    <TextBlock Text=":" Style="{StaticResource H2_stackVertical}"/>
-                                    <TextBlock Text=":" Style="{StaticResource H2_stackVertical}"/>
-                                </StackPanel>
+                                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                                    <Grid >
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="1*"/>
+                                        </Grid.ColumnDefinitions>
 
-                                <StackPanel Grid.Column="2" Margin="10 0">
-                                    <TextBox Text="{Binding NIC}" Style="{StaticResource InputH2_stackVertical}"/>
-                                    <TextBox Text="{Binding Name}" Style="{StaticResource InputH2_stackVertical}"/>
-                                    <ComboBox Text="{Binding Role}" Style="{StaticResource Combo_stackVertical}"/>
-                                    <TextBox Text="{Binding Email}" Style="{StaticResource InputH2_stackVertical}"/>
-                                    <TextBox Text="{Binding Gender}" Style="{StaticResource InputH2_stackVertical}"/>
-                                    <TextBox Text="{Binding Address}" Style="{StaticResource InputH2_stackVertical}"/>
-                                    <TextBox Text="{Binding Telephone}" Style="{DynamicResource InputH2_stackVertical}"/>
-                                    <DatePicker SelectedDate="{Binding JoinedDate}" Style="{StaticResource DTPick_stackVertical}"/>
-                                </StackPanel>
+                                        <!--Row 1-->
+                                        <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,23.6,0">
+                                            <TextBlock Text="NIC" Style="{StaticResource H2_stackVertical}"/>
+                                            <TextBlock Text="Name" Style="{StaticResource H2_stackVertical}"/>
+                                            <TextBlock Text="Role" Style="{StaticResource H2_stackVertical}"/>
+                                            <TextBlock Text="Email" Style="{StaticResource H2_stackVertical}"/>
+                                            <TextBlock Text="Gender" Style="{StaticResource H2_stackVertical}"/>
+                                            <TextBlock Text="Address" Style="{StaticResource H2_stackVertical}"/>
+                                            <TextBlock Text="Telephone" Style="{StaticResource H2_stackVertical}"/>
+                                            <TextBlock Text="Joined Date" Style="{StaticResource H2_stackVertical}"/>
+                                        </StackPanel>
 
-                                <StackPanel Grid.Row="2" Grid.ColumnSpan="3"  Margin="5" Orientation="Horizontal" FlowDirection="RightToLeft">
+                                        <StackPanel Grid.Column="1" Margin="10.4,0,454.8,0" Grid.ColumnSpan="2">
+                                            <TextBlock Text=":" Style="{StaticResource H2_stackVertical}"/>
+                                            <TextBlock Text=":" Style="{StaticResource H2_stackVertical}"/>
+                                            <TextBlock Text=":" Style="{StaticResource H2_stackVertical}"/>
+                                            <TextBlock Text=":" Style="{StaticResource H2_stackVertical}"/>
+                                            <TextBlock Text=":" Style="{StaticResource H2_stackVertical}"/>
+                                            <TextBlock Text=":" Style="{StaticResource H2_stackVertical}"/>
+                                            <TextBlock Text=":" Style="{StaticResource H2_stackVertical}"/>
+                                            <TextBlock Text=":" Style="{StaticResource H2_stackVertical}"/>
+                                        </StackPanel>
+
+                                        <StackPanel Grid.Column="2" Margin="10.4,0,9.8,0">
+                                            <TextBox Text="{Binding NIC}" Style="{StaticResource InputH2_stackVertical}"/>
+                                            <TextBox Text="{Binding Name}" Style="{StaticResource InputH2_stackVertical}"/>
+                                            <ComboBox Text="{Binding Role}" Style="{StaticResource Combo_stackVertical}"/>
+                                            <TextBox Text="{Binding Email}" Style="{StaticResource InputH2_stackVertical}"/>
+                                            <TextBox Text="{Binding Gender}" Style="{StaticResource InputH2_stackVertical}"/>
+                                            <TextBox Text="{Binding Address}" Style="{StaticResource InputH2_stackVertical}"/>
+                                            <TextBox Text="{Binding Telephone}" Style="{DynamicResource InputH2_stackVertical}"/>
+                                            <DatePicker SelectedDate="{Binding JoinedDate}" Height="27" Style="{StaticResource DTPick_stackVertical}"/>
+                                        </StackPanel>
+
+                                        <!--Row 2-->
+                                        
+                                        
+                                    </Grid>
+
+                                </ScrollViewer>
+
+
+                                <StackPanel Grid.Row="2"  Margin="5" Orientation="Horizontal" FlowDirection="RightToLeft">
                                     <Button Content="Call" Padding="15 0" Margin="10 0 0 0" Height="auto"/>
                                     <Button Content="Email" Padding="15 0" Margin="10 0 0 0" Height="30" VerticalAlignment="Top" Click="Button_Click"/>
                                 </StackPanel>
