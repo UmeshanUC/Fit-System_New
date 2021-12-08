@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FITSystem.FITControls
+namespace FitSystem.FITControls
 {
     /// <summary>
     /// Interaction logic for FIT_Title_Bar.xaml

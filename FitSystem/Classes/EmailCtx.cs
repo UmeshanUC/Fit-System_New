@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FITSystem.Classes
+namespace FitSystem.Classes
 {
     public class EmailCtx
     {

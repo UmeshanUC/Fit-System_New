@@ -1,8 +1,8 @@
-﻿using FITSystem.Models;
+﻿using FitSystem.Models;
 using System.Data.Entity;
 using System.Threading;
 
-namespace FITSystem.Database
+namespace FitSystem.Database
 {
     
     public class FitDb : DbContext

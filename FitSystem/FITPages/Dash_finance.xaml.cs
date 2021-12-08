@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FITSystem.FITPages
+namespace FitSystem.FITPages
 {
     /// <summary>
     /// Interaction logic for Dash_finance.xaml

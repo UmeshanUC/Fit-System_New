@@ -1,4 +1,4 @@
-﻿using FITSystem.FITPages;
+﻿using FitSystem.FITPages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FITSystem
+namespace FitSystem
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

@@ -1,6 +1,6 @@
-﻿using FITSystem.Classes;
-using FITSystem.Database;
-using FITSystem.Models;
+﻿using FitSystem.Classes;
+using FitSystem.Database;
+using FitSystem.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace FITSystem
+namespace FitSystem
 {
     /// <summary>
     /// Interaction logic for AddPerson.xaml

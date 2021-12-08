@@ -95,19 +95,6 @@
     <Compile Include="ManageStaffAndMembers.xaml.cs">
       <DependentUpon>ManageStaffAndMembers.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202112051230277_init4.cs" />
-    <Compile Include="Migrations\202112051230277_init4.designer.cs">
-      <DependentUpon>202112051230277_init4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202112051246068_init5.cs" />
-    <Compile Include="Migrations\202112051246068_init5.designer.cs">
-      <DependentUpon>202112051246068_init5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202112051249023_init6.cs" />
-    <Compile Include="Migrations\202112051249023_init6.designer.cs">
-      <DependentUpon>202112051249023_init6.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Profile.xaml.cs">
       <DependentUpon>Profile.xaml</DependentUpon>
     </Compile>
@@ -239,15 +226,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\202112051230277_init4.resx">
-      <DependentUpon>202112051230277_init4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202112051246068_init5.resx">
-      <DependentUpon>202112051246068_init5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202112051249023_init6.resx">
-      <DependentUpon>202112051249023_init6.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

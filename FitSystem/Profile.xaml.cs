@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace FITSystem
+namespace FitSystem
 {
     /// <summary>
     /// Interaction logic for Profile.xaml

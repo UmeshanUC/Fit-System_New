@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FITSystem.Models
+namespace FitSystem.Models
 {
     public class Employee
     {
@@ -16,10 +16,10 @@ namespace FITSystem.Models
         public int BankAccount { get; set; }
         public string OtherFacts { get; set; } //Qualifications or Describe Employee
         //Salary
-        public int BaseSalary { get; set; }
-        public int Bonus { get; set; }
-        public int Deduction { get; set; }
-        public int NetSalary { get; set; }
+        public decimal BaseSalary { get; set; }
+        public decimal Bonus { get; set; }
+        public decimal Deduction { get; set; }
+        public decimal NetSalary { get; set; }
 
 
         #region NavigationProps

@@ -1,8 +1,8 @@
-﻿using FITSystem.Classes.Models;
+﻿using FitSystem.Classes.Models;
 using System;
 using System.Windows;
 
-namespace FITSystem.Classes
+namespace FitSystem.Classes
 {
     public class DetailCardCtx : IDetailCard
     {

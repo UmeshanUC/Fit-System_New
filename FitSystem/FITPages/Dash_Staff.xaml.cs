@@ -1,5 +1,5 @@
-﻿using FITSystem.Classes;
-using FITSystem.Database;
+﻿using FitSystem.Classes;
+using FitSystem.Database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FITSystem.FITPages
+namespace FitSystem.FITPages
 {
     /// <summary>
     /// Interaction logic for Dash_Staff.xaml

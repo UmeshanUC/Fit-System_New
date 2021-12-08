@@ -1,6 +1,6 @@
 ﻿using FitSystem;
-using FITSystem.Database;
-using FITSystem.Models;
+using FitSystem.Database;
+using FitSystem.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -16,7 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace FITSystem
+namespace FitSystem
 {
     /// <summary>
     /// Interaction logic for UserLogin.xaml

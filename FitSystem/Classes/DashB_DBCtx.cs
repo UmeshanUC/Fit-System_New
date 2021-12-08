@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Threading;
 
-namespace FITSystem
+namespace FitSystem
 {
     public partial class DashB
     {

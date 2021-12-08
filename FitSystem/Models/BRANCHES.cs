@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace FITSystem.Models
+namespace FitSystem.Models
 {
     /// <summary>
     /// Only for contanct Details. No Relationship to the other Models

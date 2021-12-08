@@ -15,15 +15,34 @@
 
         <StackPanel>
             <TextBlock Text="Joined Date" Style="{StaticResource H2_stackVertical}"/>
-
+            <TextBlock Text="EPF No" Style="{StaticResource H2_stackVertical}"/>
+            <TextBlock Text="Bank Account" Style="{StaticResource H2_stackVertical}"/>
+            <TextBlock Text="Other Facts" Style="{StaticResource H2_stackVertical}"/>
+            <TextBlock Text="Base Salary" Style="{StaticResource H2_stackVertical}"/>
+            <TextBlock Text="Bonus" Style="{StaticResource H2_stackVertical}"/>
+            <TextBlock Text="Deduction" Style="{StaticResource H2_stackVertical}"/>
+            <TextBlock Text="NetSalary" Style="{StaticResource H2_stackVertical}"/>
         </StackPanel>
         <StackPanel Grid.Column="1">
             <TextBlock Text=":" Style="{StaticResource H2_stackVertical}"/>
+            <TextBlock Text=":" Style="{StaticResource H2_stackVertical}"/>
+            <TextBlock Text=":" Style="{StaticResource H2_stackVertical}"/>
+            <TextBlock Text=":" Style="{StaticResource H2_stackVertical}"/>
+            <TextBlock Text=":" Style="{StaticResource H2_stackVertical}"/>
+            <TextBlock Text=":" Style="{StaticResource H2_stackVertical}"/>
+            <TextBlock Text=":" Style="{StaticResource H2_stackVertical}"/>
+            <TextBlock Text=":" Style="{StaticResource H2_stackVertical}"/>
 
         </StackPanel>
-        <StackPanel>
+        <StackPanel Grid.Column="2">
             <TextBox Text="{Binding Telephone}" Style="{DynamicResource InputH2_stackVertical}"/>
-
+            <TextBox Text="{Binding Telephone}" Style="{DynamicResource InputH2_stackVertical}"/>
+            <TextBox Text="{Binding Telephone}" Style="{DynamicResource InputH2_stackVertical}"/>
+            <TextBox Text="{Binding Telephone}" Style="{DynamicResource InputH2_stackVertical}"/>
+            <TextBox Text="{Binding Telephone}" Style="{DynamicResource InputH2_stackVertical}"/>
+            <TextBox Text="{Binding Telephone}" Style="{DynamicResource InputH2_stackVertical}"/>
+            <TextBox Text="{Binding Telephone}" Style="{DynamicResource InputH2_stackVertical}"/>
+            <TextBox Text="{Binding Telephone}" Style="{DynamicResource InputH2_stackVertical}"/>
         </StackPanel>
 
     </Grid>
