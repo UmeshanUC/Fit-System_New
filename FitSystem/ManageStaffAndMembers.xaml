@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FitSystem"
         mc:Ignorable="d"
-        Title="ManageStaffAndMembers" Height="450" Width="800" 
+        Title="ManageStaffAndMembers" Height="450" Width="800" WindowState="Maximized"
         xmlns:Controls="clr-namespace:FitSystem.FITControls"
-        Style="{StaticResource DefWindow}"  WindowStartupLocation="CenterScreen"
+        Style="{StaticResource DefWindow}"  WindowStartupLocation="CenterScreen" Closing="Window_Closing"
         >
     
     <WindowChrome.WindowChrome>
@@ -54,7 +54,7 @@
                     </StackPanel>
 
                     <StackPanel FlowDirection="RightToLeft" Orientation="Horizontal" Grid.ColumnSpan="2" Grid.Row="1">
-                        <Button Content="Cancel" Margin="10 0" Width="70"/>
+                        <Button Content="Cancel" Margin="10 0" Width="70" Click="Button_Click_4"/>
                         <Button Content="OK" Margin="10 0" Width="70"/>
                     </StackPanel>
                 </Grid>

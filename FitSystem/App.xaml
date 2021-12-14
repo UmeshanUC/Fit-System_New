@@ -6,9 +6,13 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="ResourceDictionaries\DataGrid.xaml"/>
-            </ResourceDictionary.MergedDictionaries>
+                <!--<ResourceDictionary Source="ResourceDictionaries\DataGrid.xaml"/>-->
 
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Dark.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Blue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.DeepPurple.xaml" />
+            </ResourceDictionary.MergedDictionaries>
             <Style x:Key="DefWindow" TargetType="Window" >
                 <Setter Property="AllowsTransparency" Value="True"/>
                 <Setter Property="WindowStyle" Value="None"/>
@@ -115,7 +119,7 @@
                 <Setter Property="FontFamily" Value="Arial"/>
             </Style>
 
-            <!--Heading 2 Vertically Stacking Conbo Style-->
+            <!--Heading 2 Vertically Stacking Combo Style-->
             <Style x:Key="Combo_stackVertical" TargetType="ComboBox">
                 <Setter Property="Margin" Value="0 0 0 20"/>
                 <Setter Property="Height" Value="30"/>
@@ -160,6 +164,10 @@
                 <Setter Property="Background" Value="#282930"/>
             </Style>
             <!-- ..... -->
+
+
+            <Color x:Key="TextBlockForeColor">#FFB1B1B1</Color>
+            <SolidColorBrush x:Key="TextBlockForecolorBrush" Color="{StaticResource TextBlockForeColor}" />
 
         </ResourceDictionary>
     </Application.Resources>

@@ -33,7 +33,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*"/>
                     <RowDefinition Height="1*"/>
-                    <RowDefinition Height="1*"/>
+                    <!--<RowDefinition Height="1*"/>-->
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*"/>
@@ -42,11 +42,11 @@
 
                 <TextBlock Text="Total Employed" Grid.Column="0" Grid.Row="0"/>
                 <TextBlock Text="Today on Work" Grid.Column="0" Grid.Row="1"/>
-                <TextBlock Text="Other/Pending" Grid.Column="0" Grid.Row="2"/>
+                <!--<TextBlock Text="Other/Pending" Grid.Column="0" Grid.Row="2"/>-->
 
                 <TextBlock Text="{Binding Path=TotalEmployed}" Grid.Column="1" Grid.Row="0"/>
                 <TextBlock Text="{Binding Path=TodayOnWork}" Grid.Column="1" Grid.Row="1"/>
-                <TextBlock Text="{Binding Path=TotalOther}" Grid.Column="1" Grid.Row="2"/>
+                <!--<TextBlock Text="{Binding Path=TotalOther}" Grid.Column="1" Grid.Row="2"/>-->
 
             </Grid>
 

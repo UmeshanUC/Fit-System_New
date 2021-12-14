@@ -12,8 +12,8 @@ namespace FitSystem.Models
     {
         [Key][ForeignKey("Person")]
         public string NIC { get; set; }
-        public float Weight { get; set; }
-        public float Height { get; set; }
+        public decimal Weight { get; set; }
+        public decimal Height { get; set; }
         public string Package { set; get; }
 
         #region NavigationProps

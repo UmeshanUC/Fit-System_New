@@ -24,7 +24,7 @@ namespace FitSystem.FITControls
         public DetailCard()
         {
             InitializeComponent();
-
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -40,5 +40,6 @@ namespace FitSystem.FITControls
             manageStaffAndMembers.ShowDialog();
             //Window.GetWindow(this)?.Close();
         }
+
     }
 }

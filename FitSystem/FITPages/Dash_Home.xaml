@@ -5,10 +5,10 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:FitSystem.FITPages"
       xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
-
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d"
-      Title="Dash_Home">
-
+      Title="Dash_Home" Unloaded="Page_Unloaded" d:DesignWidth="1067.545" d:DesignHeight="597.827"
+      >
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -76,42 +76,31 @@
             <Border Grid.Row="0"  CornerRadius="4" Margin="10" Background="#282930">
                 <Grid  Margin="25">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="auto"/>
                         <ColumnDefinition Width="1*"/>
                     </Grid.ColumnDefinitions>
 
-
+                    <!--Left - Cout Panel-->
                     <DockPanel>
                         <TextBlock DockPanel.Dock="Top" Text="MEMBERS" Style="{StaticResource H1}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"/>
 
                         <StackPanel DockPanel.Dock="Left" VerticalAlignment="Center" HorizontalAlignment="Center" >
-                            <TextBlock Text="Today :" Margin="100,0,0,50" Style="{StaticResource TBlockCommon}" />
-                            <TextBlock Text="Total   :" Margin="100,0,0,0" Style="{StaticResource TBlockCommon}"/>
+                            <TextBlock Text="Today :" Margin="25 0 50 50" Style="{StaticResource TBlockCommon}" />
+                            <TextBlock Text="Total   :" Margin="25,0,0,0" Style="{StaticResource TBlockCommon}"/>
                         </StackPanel>
                         <StackPanel DockPanel.Dock="Right" VerticalAlignment="Center" HorizontalAlignment="Center" >
-                            <TextBlock x:Name="tbTodayStaff" Text="0" Margin="0,0,0,50" Style="{StaticResource TBlockCommon}" />
-                            <TextBlock x:Name="tbTotalStaff" Text="0" Style="{StaticResource TBlockCommon}"/>
+                            <TextBlock x:Name="tbTodayStaff" Text="{Binding MembersToday}" Margin="0,0,25,50" Style="{StaticResource TBlockCommon}" />
+                            <TextBlock x:Name="tbTotalStaff" Text="{Binding MembersTotal}" Style="{StaticResource TBlockCommon}"/>
                         </StackPanel>
 
                     </DockPanel>
 
+                    <!--Right - Marker Panel-->
+                    <DockPanel Grid.Column="1" Margin="25">
+                        <TextBox DockPanel.Dock="Top" Margin="10" Foreground="{StaticResource TextBlockForecolorBrush}"  materialDesign:HintAssist.Hint="Search to Mark Attendance" TextChanged="TextBox_TextChanged" />
+                        <DataGrid x:Name="dGridMembers" DockPanel.Dock="Bottom" Margin="10" CanUserAddRows="False" PreviewKeyDown="dGridMembers_PreviewKeyDown"/>
+                    </DockPanel>
 
-
-                    <!--custom fill gauge-->
-                    <Grid Margin="50" Grid.Column="1">
-                        <lvc:Gauge Grid.Row="2" Grid.Column="1"
-                                           From="0" To="100" Value="50"
-                                           LabelsVisibility="Collapsed"
-                                           Uses360Mode="True">
-                            <lvc:Gauge.GaugeActiveFill>
-                                <LinearGradientBrush>
-                                    <GradientStop Color="Yellow" Offset="0.0" />
-                                    <GradientStop Color="Orange" Offset="0.5" />
-                                    <GradientStop Color="Red" Offset="1.0" />
-                                </LinearGradientBrush>
-                            </lvc:Gauge.GaugeActiveFill>
-                        </lvc:Gauge>
-                    </Grid>
                 </Grid>
             </Border>
 
@@ -122,7 +111,7 @@
             <Border Grid.Row="2" CornerRadius="6" Margin="10" Background="#282930">
                 <Grid Margin="25">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="auto"/>
                         <ColumnDefinition Width="1*"/>
                     </Grid.ColumnDefinitions>
 
@@ -130,34 +119,21 @@
                         <TextBlock DockPanel.Dock="Top" Text="STAFF" Style="{StaticResource H1}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"/>
 
                         <StackPanel DockPanel.Dock="Left" VerticalAlignment="Center" HorizontalAlignment="Center" >
-                            <TextBlock Text="Today :" Margin="100,0,0,50" Style="{StaticResource TBlockCommon}" />
-                            <TextBlock Text="Total   :" Margin="100,0,0,0" Style="{StaticResource TBlockCommon}"/>
+                            <TextBlock Text="Today :"  Margin="25 0 50 50" Style="{StaticResource TBlockCommon}" />
+                            <TextBlock Text="Total   :" Margin="25,0,0,0" Style="{StaticResource TBlockCommon}"/>
                         </StackPanel>
-                        <StackPanel DockPanel.Dock="Right" VerticalAlignment="Center" HorizontalAlignment="Center" >
-                            <TextBlock x:Name="tbTodayInventory" Text="0" Margin="0,0,0,50" Style="{StaticResource TBlockCommon}" />
-                            <TextBlock x:Name="tbTotalInventory" Text="0" Style="{StaticResource TBlockCommon}"/>
+                        <StackPanel DockPanel.Dock="Right" VerticalAlignment="Center" HorizontalAlignment="Left" >
+                            <TextBlock x:Name="tbTodayInventory" Text="{Binding StaffToday}" Margin="0,0,25,50" Style="{StaticResource TBlockCommon}" />
+                            <TextBlock x:Name="tbTotalInventory" Text="{Binding StaffTotal}" Style="{StaticResource TBlockCommon}"/>
                         </StackPanel>
-
-
-
-
                     </DockPanel>
 
-                    <!--custom fill gauge-->
-                    <Grid Margin="50" Grid.Column="1">
-                        <lvc:Gauge Grid.Row="2" Grid.Column="1"
-                                           From="0" To="100" Value="50"
-                                           LabelsVisibility="Collapsed"
-                                           Uses360Mode="True">
-                            <lvc:Gauge.GaugeActiveFill>
-                                <LinearGradientBrush>
-                                    <GradientStop Color="Yellow" Offset="0.0" />
-                                    <GradientStop Color="Orange" Offset="0.5" />
-                                    <GradientStop Color="Red" Offset="1.0" />
-                                </LinearGradientBrush>
-                            </lvc:Gauge.GaugeActiveFill>
-                        </lvc:Gauge>
-                    </Grid>
+                    <!--Right - Marker Panel-->
+                    <DockPanel Grid.Column="1" Margin="25">
+                        <TextBox DockPanel.Dock="Top" Margin="10" Foreground="{StaticResource TextBlockForecolorBrush}"  materialDesign:HintAssist.Hint="Search to Mark Attendance" TextChanged="TextBox_TextChanged_1" />
+                        <DataGrid x:Name="dGridStaff" DockPanel.Dock="Bottom" Margin="10" CanUserAddRows="False" PreviewKeyDown="dGridStaff_PreviewKeyDown"/>
+                    </DockPanel>
+
 
                 </Grid>
             </Border>

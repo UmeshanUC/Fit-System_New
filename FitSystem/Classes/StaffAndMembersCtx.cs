@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FitSystem.Classes
 {
-    public class StaffAndMembersContext
+    public class StaffAndMembersCtx
     {
         public DetailCardCtx MedicalOfficersCard { get; set; }
         public DetailCardCtx TrainersCard { get; set; }

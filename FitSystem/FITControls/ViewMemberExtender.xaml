@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="FitSystem.FITControls.ViewMemberExtender"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FitSystem.FITControls"
+             xmlns:ValueConverters="clr-namespace:FitSystem.ValueConverters"
+             mc:Ignorable="d" 
+             Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ValueConverters:TextToDecimalValueConverter x:Key="TextToDecimal"/>
+    </UserControl.Resources>
+
+    <Grid Margin="10 0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel>
+            <TextBlock Text="Weight" Style="{StaticResource H2_stackVertical}"/>
+            <TextBlock Text="Height" Style="{StaticResource H2_stackVertical}"/>
+            <TextBlock Text="Package         " Style="{StaticResource H2_stackVertical}"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Margin="10 0">
+            <TextBlock Text=":" Style="{StaticResource H2_stackVertical}"/>
+            <TextBlock Text=":" Style="{StaticResource H2_stackVertical}"/>
+            <TextBlock Text=":" Style="{StaticResource H2_stackVertical}"/>
+
+        </StackPanel>
+        <StackPanel Grid.Column="2">
+            <TextBlock Text="{Binding Weight, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource TextToDecimal}}" Style="{DynamicResource H2_stackVertical}"/>
+            <TextBlock Text="{Binding Height, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource TextToDecimal}}" Style="{DynamicResource H2_stackVertical}"/>
+            <TextBlock Text="{Binding Package, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource H2_stackVertical}"/>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

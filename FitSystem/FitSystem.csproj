@@ -59,6 +59,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -80,6 +81,9 @@
     <Compile Include="AddPerson.xaml.cs">
       <DependentUpon>AddPerson.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Classes\Dash_HomeCtx.cs" />
+    <Compile Include="Classes\Models\FilterModels\PersonForDashHome.cs" />
+    <Compile Include="Classes\Models\Models.cs" />
     <Compile Include="DashB.xaml.cs">
       <DependentUpon>DashB.xaml</DependentUpon>
     </Compile>
@@ -89,18 +93,59 @@
     <Compile Include="FITControls\AddEmpExtender.xaml.cs">
       <DependentUpon>AddEmpExtender.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FITControls\AddMemberExtender.xaml.cs">
+      <DependentUpon>AddMemberExtender.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FITControls\ViewEmpExtender.xaml.cs">
+      <DependentUpon>ViewEmpExtender.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FITControls\ViewMemberExtender.xaml.cs">
+      <DependentUpon>ViewMemberExtender.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FITPages\Dash_finance.xaml.cs">
       <DependentUpon>Dash_finance.xaml</DependentUpon>
     </Compile>
     <Compile Include="ManageStaffAndMembers.xaml.cs">
       <DependentUpon>ManageStaffAndMembers.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202112131714250_picByte array added.cs" />
+    <Compile Include="Migrations\202112131714250_picByte array added.designer.cs">
+      <DependentUpon>202112131714250_picByte array added.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112140338230_TeleToStringFormat.cs" />
+    <Compile Include="Migrations\202112140338230_TeleToStringFormat.designer.cs">
+      <DependentUpon>202112140338230_TeleToStringFormat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112140629318_unnown.cs" />
+    <Compile Include="Migrations\202112140629318_unnown.designer.cs">
+      <DependentUpon>202112140629318_unnown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112140744342_unknown2.cs" />
+    <Compile Include="Migrations\202112140744342_unknown2.designer.cs">
+      <DependentUpon>202112140744342_unknown2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112141331019_fk_changed.cs" />
+    <Compile Include="Migrations\202112141331019_fk_changed.designer.cs">
+      <DependentUpon>202112141331019_fk_changed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112141359199_PackageValueToDecimal.cs" />
+    <Compile Include="Migrations\202112141359199_PackageValueToDecimal.designer.cs">
+      <DependentUpon>202112141359199_PackageValueToDecimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112141401125_PackageCodeRemoved.cs" />
+    <Compile Include="Migrations\202112141401125_PackageCodeRemoved.designer.cs">
+      <DependentUpon>202112141401125_PackageCodeRemoved.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Classes\Models\FilterModels\FilteredPerson.cs" />
     <Compile Include="Profile.xaml.cs">
       <DependentUpon>Profile.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserLogin.xaml.cs">
       <DependentUpon>UserLogin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ValueConverters\ProcessWorkRoleID.cs" />
+    <Compile Include="ValueConverters\TextToDecimalValueConverter.cs" />
     <Page Include="AddPerson.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -117,6 +162,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="FITControls\AddMemberExtender.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="FITControls\DetailCard.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -128,6 +177,14 @@
     <Page Include="FITControls\MenuBar.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FITControls\ViewEmpExtender.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FITControls\ViewMemberExtender.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="FITPages\Dash_finance.xaml">
       <SubType>Designer</SubType>
@@ -141,10 +198,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -154,11 +207,11 @@
     <Compile Include="Classes\EmailService.cs" />
     <Compile Include="Classes\ErrorService.cs" />
     <Compile Include="Classes\Global.cs" />
-    <Compile Include="Classes\Models\DetailCardCtx.cs" />
+    <Compile Include="Classes\DetailCardCtx.cs" />
     <Compile Include="Classes\Models\Interfaces\IDetailCard.cs" />
     <Compile Include="Classes\Models\Interfaces\IPerson.cs" />
     <Compile Include="Classes\Models\Profile.cs" />
-    <Compile Include="Classes\Models\StaffAndMembersContext.cs" />
+    <Compile Include="Classes\StaffAndMembersCtx.cs" />
     <Compile Include="Database\database.cs" />
     <Compile Include="FITControls\DetailCard.xaml.cs">
       <DependentUpon>DetailCard.xaml</DependentUpon>
@@ -175,10 +228,6 @@
     <Compile Include="FITPages\Dash_inventory.cs" />
     <Compile Include="FITPages\Dash_Staff.xaml.cs">
       <DependentUpon>Dash_Staff.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
     </Compile>
     <Page Include="ManageStaffAndMembers.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -226,6 +275,27 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Migrations\202112131714250_picByte array added.resx">
+      <DependentUpon>202112131714250_picByte array added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112140338230_TeleToStringFormat.resx">
+      <DependentUpon>202112140338230_TeleToStringFormat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112140629318_unnown.resx">
+      <DependentUpon>202112140629318_unnown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112140744342_unknown2.resx">
+      <DependentUpon>202112140744342_unknown2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112141331019_fk_changed.resx">
+      <DependentUpon>202112141331019_fk_changed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112141359199_PackageValueToDecimal.resx">
+      <DependentUpon>202112141359199_PackageValueToDecimal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112141401125_PackageCodeRemoved.resx">
+      <DependentUpon>202112141401125_PackageCodeRemoved.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

@@ -29,6 +29,17 @@ namespace FitSystem.FITPages
             cardMembers.DataContext = CreateDetailCardCtx("Members");
             cardTrainers.DataContext = CreateDetailCardCtx("Trainers");
             cardOther.DataContext = CreateDetailCardCtx("Other Staff");
+
+            // Setting the delegate to call a refresh from other windows
+            Global.StaffPageRefreshCallBack = RefreshData;
+        }
+
+        private void RefreshData()
+        {
+            cardMed.DataContext = CreateDetailCardCtx("Medical Officers");
+            cardMembers.DataContext = CreateDetailCardCtx("Members");
+            cardTrainers.DataContext = CreateDetailCardCtx("Trainers");
+            cardOther.DataContext = CreateDetailCardCtx("Other Staff");
         }
 
         private DetailCardCtx CreateDetailCardCtx(string personType)
@@ -49,9 +60,9 @@ namespace FitSystem.FITPages
                 {
                     CardName = personType,
                     TotalEmployed = thisTypePersonList.Count(),
-                    TodayOnWork = thisTypePersonList.Count(p=>p.TodayPresence),
-                    Males = thisTypePersonList.Count(p=>p.Gender == "Male"),
-                    Femails = thisTypePersonList.Count(p=>p.Gender == "Female"),
+                    TodayOnWork = thisTypePersonList.Count(p => p.TodayPresence),
+                    Males = thisTypePersonList.Count(p => p.Gender == "Male"),
+                    Femails = thisTypePersonList.Count(p => p.Gender == "Female"),
                     ManageType = personType,
 
                 };
@@ -62,6 +73,11 @@ namespace FitSystem.FITPages
         private void DetailCard_Loaded(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void Page_Unloaded(object sender, RoutedEventArgs e)
+        {
+            Global.StaffPageRefreshCallBack = null;
         }
     }
 }

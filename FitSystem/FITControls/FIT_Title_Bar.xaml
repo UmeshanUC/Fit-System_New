@@ -7,7 +7,10 @@
              xmlns:local="clr-namespace:FitSystem.FITControls"
              xmlns:Controls="clr-namespace:FitSystem.FITControls"
              mc:Ignorable="d" d:DesignWidth="1618.691" Height="40" >
-    <Border CornerRadius="0 0 0 0" RenderTransformOrigin="0.5,0.5" Background="#FF1B1B20">
+    <Border CornerRadius="0 0 0 0" RenderTransformOrigin="0.5,0.5" Background="#FF1B1B20" BorderThickness="1">
+        <Border.BorderBrush>
+            <SolidColorBrush Color="#FFB9B9B9" Opacity="0.5"/>
+        </Border.BorderBrush>
         <Grid Margin="0">
             <Grid VerticalAlignment="Center" Margin="5 10 10 5" >
                 <Grid.ColumnDefinitions>
@@ -17,7 +20,7 @@
                 </Grid.ColumnDefinitions>
 
                 <DockPanel Grid.Column="0" Margin="20 0">
-                    <TextBlock Text="Title" Style="{StaticResource H1}"/>
+                    <TextBlock Text="{Binding Title}" Style="{StaticResource H1}"/>
                 </DockPanel>
 
                 <DockPanel Grid.Column="1">

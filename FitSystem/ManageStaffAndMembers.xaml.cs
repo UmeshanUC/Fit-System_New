@@ -1,4 +1,5 @@
 ﻿using FitSystem.Classes;
+using FitSystem.Classes.Models.FilterModels;
 using FitSystem.Database;
 using FitSystem.Models;
 using System;
@@ -25,10 +26,12 @@ namespace FitSystem
         private readonly string personType;
         private readonly object recipient;
 
+
         public ManageStaffAndMembers()
         {
             InitializeComponent();
             LoadGrid(Global.ManagingWorkRoleID);
+            Global.ManageStaffAndMembersRefreshCallBack = RefreshData;
         }
 
         #region Methods
@@ -36,8 +39,9 @@ namespace FitSystem
         {
             using (FitDb db = new FitDb())
             {
-                var selectedPersonList = db.PersonSet.Where(p => p.WorkRoleID == workRoleID).ToList();
-                DGridPerson.ItemsSource = selectedPersonList;
+                var selectedPersons = db.PersonSet.Where(p => p.WorkRoleID == workRoleID);
+                List<FilteredPerson> filteredPersons = FilterPersonDetails(selectedPersons);
+                DGridPerson.ItemsSource = filteredPersons;
             }
         }
 
@@ -64,10 +68,26 @@ namespace FitSystem
 
         }
 
-        private Person GetSelectedGridItem(object sender)
+        public List<FilteredPerson> FilterPersonDetails(IQueryable<Person> List)
+        {
+            var Filtrate = List.Select(a => new FilteredPerson()
+            {
+                NIC = a.NIC,
+                Name = a.Name,
+                Address = a.Address,
+                Email = a.Email,
+                Gender = a.Gender,
+                JoinedDate = a.JoinedDate,
+                Telephone = a.Telephone,
+                TodayPresence = a.TodayPresence,
+            });
+            return Filtrate.ToList();
+        }
+
+        private FilteredPerson GetSelectedGridItem(object sender)
         {
             DataGrid grid = sender as DataGrid;
-            Person person = grid.SelectedItem as Person;
+            FilteredPerson person = grid?.SelectedItem as FilteredPerson;
             return person;
         }
 
@@ -84,44 +104,56 @@ namespace FitSystem
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            AddPerson addPerson = new AddPerson(RefreshData);
+            AddPerson addPerson = new AddPerson();
             addPerson.ShowDialog();
         }
 
         private void DGridPerson_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            Person person = GetSelectedGridItem(sender);
+            FilteredPerson person = GetSelectedGridItem(sender);
             if (person is null) return;
 
-            AddPerson addPerson = new AddPerson(person.NIC, RefreshData);
-            addPerson.ShowDialog();
+            Profile profile = new Profile(person.NIC);
+            profile.ShowDialog();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            DGridPerson_MouseDoubleClick(DGridPerson as object, null);
+            FilteredPerson person = GetSelectedGridItem(DGridPerson as object);
+            if (person is null) return;
+
+            AddPerson addPerson = new AddPerson(person.NIC);
+            addPerson.ShowDialog();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            Person person = GetSelectedGridItem(DGridPerson as object);
+            FilteredPerson person = GetSelectedGridItem(DGridPerson as object);
             if (person is null) return;
 
             Email email = new Email(person.Email);
             email.ShowDialog();
-
-
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            Person person = GetSelectedGridItem(DGridPerson as object);
+            FilteredPerson person = GetSelectedGridItem(DGridPerson as object);
             if (person?.NIC is null)
             {
                 ErrorService.ShowError("Error occured when deleting. Not deleted !");
             }
             RemovePerson(person.NIC);
             LoadGrid(Global.ManagingWorkRoleID);
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Global.ManageStaffAndMembersRefreshCallBack = null;
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

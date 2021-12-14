@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="FitSystem.FITControls.AddEmpExtender"
+﻿<UserControl x:Class="FitSystem.FITControls.ViewEmpExtender"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:FitSystem.FITControls"
              xmlns:ValueConverters="clr-namespace:FitSystem.ValueConverters"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" KeyDown="UserControl_KeyDown">
+             d:DesignHeight="450" d:DesignWidth="800" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3">
     <UserControl.Resources>
         <ValueConverters:TextToDecimalValueConverter x:Key="TextToDecimal"/>
     </UserControl.Resources>
@@ -37,13 +37,13 @@
 
         </StackPanel>
         <StackPanel Grid.Column="2">
-            <TextBox Text="{Binding EpfNo, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource InputH2_stackVertical}"/>
-            <TextBox Text="{Binding BankAccount, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource InputH2_stackVertical}"/>
-            <TextBox Text="{Binding OtherFacts, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource InputH2_stackVertical}"/>
-            <TextBox Text="{Binding BaseSalary, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource TextToDecimal}}" Style="{DynamicResource InputH2_stackVertical}"/>
-            <TextBox Text="{Binding Bonus, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource TextToDecimal}}" Style="{DynamicResource InputH2_stackVertical}"/>
-            <TextBox Text="{Binding Deduction, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource TextToDecimal}}" Style="{DynamicResource InputH2_stackVertical}"/>
-            <TextBox Text="{Binding NetSalary, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource TextToDecimal}}" Style="{DynamicResource InputH2_stackVertical}"/>
+            <TextBlock Text="{Binding EpfNo, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource H2_stackVertical}"/>
+            <TextBlock Text="{Binding BankAccount, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource H2_stackVertical}"/>
+            <TextBlock Text="{Binding OtherFacts, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource H2_stackVertical}"/>
+            <TextBlock Text="{Binding BaseSalary, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource TextToDecimal}}" Style="{DynamicResource H2_stackVertical}"/>
+            <TextBlock Text="{Binding Bonus, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource TextToDecimal}}" Style="{DynamicResource H2_stackVertical}"/>
+            <TextBlock Text="{Binding Deduction, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource TextToDecimal}}" Style="{DynamicResource H2_stackVertical}"/>
+            <TextBlock Text="{Binding NetSalary, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource TextToDecimal}}" Style="{DynamicResource H2_stackVertical}"/>
         </StackPanel>
 
     </Grid>

@@ -19,7 +19,7 @@
 
             <!--TitleBar-->
             <StackPanel Orientation="Vertical" Margin="0" DockPanel.Dock="Top">
-                <Controls:FitTitleBar DockPanel.Dock="Top" MouseDown="FitTitleBar_MouseDown">
+                <Controls:FitTitleBar Title="Email"  DockPanel.Dock="Top" MouseDown="FitTitleBar_MouseDown">
                     <Controls:FitTitleBar.Background>
                         <RadialGradientBrush>
                             <GradientStop Color="Black" Offset="0"/>

@@ -20,9 +20,11 @@ namespace FitSystem.FITControls
     /// </summary>
     public partial class FitTitleBar : UserControl
     {
+        public string Title { get; set; }
         public FitTitleBar()
         {
             InitializeComponent();
+            DataContext = this;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

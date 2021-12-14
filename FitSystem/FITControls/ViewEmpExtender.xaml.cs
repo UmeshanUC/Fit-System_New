@@ -1,5 +1,4 @@
-﻿using FitSystem.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,22 +16,13 @@ using System.Windows.Shapes;
 namespace FitSystem.FITControls
 {
     /// <summary>
-    /// Interaction logic for AddEmpExtender.xaml
+    /// Interaction logic for ViewEmpExtender.xaml
     /// </summary>
-    public partial class AddEmpExtender : UserControl
+    public partial class ViewEmpExtender : UserControl
     {
-        public AddEmpExtender()
+        public ViewEmpExtender()
         {
             InitializeComponent();
-        }
-
-        private void UserControl_KeyDown(object sender, KeyEventArgs e)
-        {
-            //if(e.Key == Key.Return)
-            //{
-            //    Employee employee = (DataContext as Employee);
-            //    MessageBox.Show(employee.BaseSalary.ToString() + "\n" + employee.OtherFacts);
-            //}
         }
     }
 }

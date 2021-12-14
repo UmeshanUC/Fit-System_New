@@ -6,8 +6,9 @@
       xmlns:local="clr-namespace:FitSystem.FITPages"
       xmlns:Controls="clr-namespace:FitSystem.FITControls"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="Dash_Staff" Width="1296" Height="784">
+      d:DesignHeight="626.493" d:DesignWidth="1035.943"
+      Title="Dash_Staff" Unloaded="Page_Unloaded"
+      >
 
     <Grid Margin="25">
         <Grid.RowDefinitions>
