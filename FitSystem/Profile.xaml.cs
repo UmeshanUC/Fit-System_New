@@ -29,7 +29,7 @@ namespace FitSystem
             InitializeComponent();
             using (FitDb db = new FitDb())
             {
-                Person person = db.PersonSet.Find(NIC);
+                Person person = db.PersonSet.Include("WorkRoles").Where(rec => rec.NIC == NIC).FirstOrDefault();
                 if (person is null)
                 {
                     ErrorService.ShowError("Error occured in loading data");
