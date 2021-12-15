@@ -46,9 +46,10 @@ namespace FITSystem
             db.PersonSet.Add(persn);
             Login login = new Login()
             {
+                NIC = text_nic.Text,
                 Username = text_username.Text,
                 Passwd = text_username.Text,
-                PermissionLevel = 3,
+                PermissionLevel = 2,
             };
 
             db.LoginSet.Add(login);
@@ -56,6 +57,7 @@ namespace FITSystem
 
             Member member = new Member()
             {
+                NIC = text_nic.Text,
                 Weight = decimal.Parse(text_weight.Text),
                 Height = decimal.Parse(text_height.Text),
                 Package = "basic"

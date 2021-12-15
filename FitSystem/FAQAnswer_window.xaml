@@ -17,7 +17,7 @@
                 </Label.Background>
             </Label>
             <Label FontWeight="Bold" Background="#FF323232" Foreground="#FFB1B1B1" Content="1.I have download program. How to login for the first time?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-3,34,0,-29" Width="777"/>
-            <TextBox  Foreground="#FFB1B1B1"  Background="#FF1B1B20" HorizontalAlignment="Left" Height="64" Margin="-3,58,0,-93" TextWrapping="Wrap" Text="
+            <TextBox  Foreground="#FFB1B1B1"  Background="#FF1B1B20" HorizontalAlignment="Left" Height="64" Margin="-3,58,0,0" TextWrapping="Wrap" Text="
 
 Start FM. On the first FM screen just click Try button instead Register to start a free trial. The only the limitation in trial versions is that you can add up to 10 members. There are no other limitations.
 
@@ -29,7 +29,7 @@ password: admin
 
 Be sure to use lowercase letters.
 " VerticalAlignment="Top" Width="777"/>
-            <Label  FontWeight="Bold" Background="#FF323232" Foreground="#FFB1B1B1" Content="2.How to Upgrade from Basic to Plus" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-3,122,0,-117" Width="777"/>
+            <Label  FontWeight="Bold" Background="#FF323232" Foreground="#FFB1B1B1" Content="2.How to Upgrade from Basic to Plus" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-3,122,0,0" Width="777"/>
             <TextBox  Foreground="#FFB1B1B1"  Background="#FF1B1B20" HorizontalAlignment="Left" Height="64" Margin="-3,146,0,-181" TextWrapping="Wrap" Text="
 First contact us to get payment link for upgrade.
 When payment is confirmed we will send you serial number for upgrade.

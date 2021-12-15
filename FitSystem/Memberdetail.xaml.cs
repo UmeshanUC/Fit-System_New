@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.Windows;
 using FitSystem;
+using FitSystem.Classes;
 using FitSystem.Database;
 
 namespace FITSystem
@@ -25,6 +26,11 @@ namespace FITSystem
         {
             FitDb db = new FitDb();
             var record = db.PersonSet.Where(a=>a.NIC==Global.logusernic).FirstOrDefault();
+            if(record is null)
+            {
+                ErrorService.ShowError("No record found");
+                return;
+            }
             text_address.Text = record.Address;
             text_name.Text = record.Name;
             text_mail.Text = record.Email;

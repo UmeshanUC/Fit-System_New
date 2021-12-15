@@ -4,10 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FITSystem"
+        xmlns:Controls="clr-namespace:FitSystem.FITControls"
         mc:Ignorable="d"
         WindowStyle="None"
         Title="Guest_register" Height="450" Width="800">
-    <Grid Background="#FF1A1B20" Height="450" Width="800">
+    <DockPanel>
+        <Controls:FitTitleBar DockPanel.Dock="Top" Title="Mokak Hri Daapan"/>
+        <Grid Background="#FF1A1B20" Height="450" Width="800" DockPanel.Dock="Bottom">
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition Height="48"/>
@@ -44,21 +47,22 @@
         <Label Foreground="#FFB1B1B1" Content="Password"  Background="#FF323232" Grid.ColumnSpan="3" Margin="51,0.4,226,9.6" Grid.Row="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="3" />
         <Label Foreground="#FFB1B1B1" Content="User Name"  Background="#FF323232" Grid.ColumnSpan="3" Margin="51,0.4,226,9.6" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="3" />
         <Label Foreground="#FFB1B1B1" Content="Name"   Background="#FF323232" Grid.ColumnSpan="3" Margin="51,0.4,226,9.6" Grid.Row="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
-        <TextBlock x:Name="text_email" Grid.Column="2" HorizontalAlignment="Left" Margin="18.4,0.4,0,0" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White"/>
-        <TextBlock x:Name="text_name" Grid.Column="2" HorizontalAlignment="Left" Margin="18.4,49,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White" Grid.RowSpan="2"/>
-        <TextBlock x:Name="text_username" Grid.Column="5" HorizontalAlignment="Left" Margin="18.4,0.4,0,0" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White"/>
-        <TextBlock x:Name="text_nic" Grid.Column="2" HorizontalAlignment="Left" Margin="18.4,0.4,0,0" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White"/>
-        <TextBlock x:Name="text_passwrd" Grid.Column="5" HorizontalAlignment="Left" Margin="18.4,47.4,0,0" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White" Grid.RowSpan="2"/>
-        <TextBlock x:Name="text_tele" Grid.Column="2" HorizontalAlignment="Left" Margin="18.4,47.4,0,0" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White" Grid.RowSpan="2"/>
-        <TextBlock x:Name="text_confirmpasswrd" Grid.Column="5" HorizontalAlignment="Left" Margin="18.4,0.4,0,0" Grid.Row="4" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White"/>
-        <TextBlock x:Name="text_address" Grid.Column="2" HorizontalAlignment="Left" Margin="18.4,47.4,0,0" Grid.Row="4" TextWrapping="Wrap" Text="k" VerticalAlignment="Top" Width="208" Height="127" Foreground="#FFCE9B9B" Background="White" Grid.RowSpan="4"/>
-        <TextBlock x:Name="text_height" Grid.Column="5" HorizontalAlignment="Left" Margin="18.4,0.4,0,0" Grid.Row="5" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White"/>
-        <TextBlock x:Name="text_weight" Grid.Column="5" HorizontalAlignment="Left" Margin="18.4,0.4,0,0" Grid.Row="6" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White"/>
-        <TextBlock x:Name="text_gender" Grid.Column="5" HorizontalAlignment="Left" Margin="18.4,49,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White" Grid.RowSpan="2"/>
+        <TextBox x:Name="text_email" Grid.Column="2" HorizontalAlignment="Left" Margin="18.4,0.4,0,0" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White"/>
+        <TextBox x:Name="text_name" Grid.Column="2" HorizontalAlignment="Left" Margin="18.4,49,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White" Grid.RowSpan="2"/>
+        <TextBox x:Name="text_username" Grid.Column="5" HorizontalAlignment="Left" Margin="18.4,0.4,0,0" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White"/>
+        <TextBox x:Name="text_nic" Grid.Column="2" HorizontalAlignment="Left" Margin="18.4,0.4,0,0" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White"/>
+        <TextBox x:Name="text_passwrd" Grid.Column="5" HorizontalAlignment="Left" Margin="18.4,47.4,0,0" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White" Grid.RowSpan="2"/>
+        <TextBox x:Name="text_tele" Grid.Column="2" HorizontalAlignment="Left" Margin="18.4,47.4,0,0" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White" Grid.RowSpan="2"/>
+        <TextBox x:Name="text_confirmpasswrd" Grid.Column="5" HorizontalAlignment="Left" Margin="18.4,0.4,0,0" Grid.Row="4" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White"/>
+        <TextBox x:Name="text_address" Grid.Column="2" HorizontalAlignment="Left" Margin="18.4,47.4,0,0" Grid.Row="4" TextWrapping="Wrap" Text="k" VerticalAlignment="Top" Width="208" Height="127" Foreground="#FFCE9B9B" Background="White" Grid.RowSpan="4"/>
+        <TextBox x:Name="text_height" Grid.Column="5" HorizontalAlignment="Left" Margin="18.4,0.4,0,0" Grid.Row="5" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White"/>
+        <TextBox x:Name="text_weight" Grid.Column="5" HorizontalAlignment="Left" Margin="18.4,0.4,0,0" Grid.Row="6" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White"/>
+        <TextBox x:Name="text_gender" Grid.Column="5" HorizontalAlignment="Left" Margin="18.4,49,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White" Grid.RowSpan="2"/>
         <Button x:Name="btn_browse" Content="Browse" Grid.Column="5" HorizontalAlignment="Left" Margin="151.4,0.4,0,0" Grid.Row="7" VerticalAlignment="Top" Width="75"/>
 
 
 
 
     </Grid>
+    </DockPanel>
 </Window>

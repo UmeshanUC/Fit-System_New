@@ -98,10 +98,9 @@ namespace FitSystem
                         Navigate<DashB>();
                         break;
                     case 1:
-                    case 2:
                         Navigate<Trainer_window>();
                         break;
-                    case 3:
+                    case 2:
                         Navigate<memberdashboard>();
                         break;
 
