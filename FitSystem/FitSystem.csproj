@@ -136,13 +136,13 @@
     <Compile Include="Member_payment.xaml.cs">
       <DependentUpon>Member_payment.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202112142321163_init.cs" />
-    <Compile Include="Migrations\202112142321163_init.designer.cs">
-      <DependentUpon>202112142321163_init.cs</DependentUpon>
+    <Compile Include="Migrations\202112150429104_CASCADE_DELETE.cs" />
+    <Compile Include="Migrations\202112150429104_CASCADE_DELETE.designer.cs">
+      <DependentUpon>202112150429104_CASCADE_DELETE.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202112142324091_init-2.cs" />
-    <Compile Include="Migrations\202112142324091_init-2.designer.cs">
-      <DependentUpon>202112142324091_init-2.cs</DependentUpon>
+    <Compile Include="Migrations\202112150447218_Refs.cs" />
+    <Compile Include="Migrations\202112150447218_Refs.designer.cs">
+      <DependentUpon>202112150447218_Refs.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Profile.xaml.cs">
@@ -325,11 +325,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\202112142321163_init.resx">
-      <DependentUpon>202112142321163_init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202112150429104_CASCADE_DELETE.resx">
+      <DependentUpon>202112150429104_CASCADE_DELETE.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202112142324091_init-2.resx">
-      <DependentUpon>202112142324091_init-2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202112150447218_Refs.resx">
+      <DependentUpon>202112150447218_Refs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -23,9 +23,6 @@ namespace FitSystem
     /// </summary>
     public partial class ManageStaffAndMembers : Window
     {
-        private readonly string personType;
-        private readonly object recipient;
-
 
         public ManageStaffAndMembers()
         {
@@ -39,7 +36,7 @@ namespace FitSystem
         {
             using (FitDb db = new FitDb())
             {
-                var selectedPersons = db.PersonSet.Where(p => p.WorkRoleID == workRoleID);
+                var selectedPersons = db.PersonSet.Include("WorkRoles").Where(p => p.WorkRoleID == workRoleID);
                 List<FilteredPerson> filteredPersons = FilterPersonDetails(selectedPersons);
                 DGridPerson.ItemsSource = filteredPersons;
             }
@@ -74,6 +71,7 @@ namespace FitSystem
             {
                 NIC = a.NIC,
                 Name = a.Name,
+                Role = a.WorkRoles.RoleName,
                 Address = a.Address,
                 Email = a.Email,
                 Gender = a.Gender,

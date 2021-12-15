@@ -79,11 +79,6 @@ namespace FitSystem
             openedWin.ForEach(win => win.Close());
         }
 
-        public static string GetCurrentDir()
-        {
-            return Directory.GetCurrentDirectory();
-        }
-
         /// <summary>
         /// Opens a image filtering OpenFileDialog Box
         /// </summary>

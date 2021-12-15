@@ -98,7 +98,7 @@
                     <!--Right - Marker Panel-->
                     <DockPanel Grid.Column="1" Margin="25">
                         <TextBox DockPanel.Dock="Top" Margin="10" Foreground="{StaticResource TextBlockForecolorBrush}"  materialDesign:HintAssist.Hint="Search to Mark Attendance" TextChanged="TextBox_TextChanged" />
-                        <DataGrid x:Name="dGridMembers" DockPanel.Dock="Bottom" Margin="10" CanUserAddRows="False" PreviewKeyDown="dGridMembers_PreviewKeyDown"/>
+                        <DataGrid x:Name="dGridMembers" DockPanel.Dock="Bottom" Margin="10" CanUserAddRows="False" PreviewMouseDoubleClick="dGridMembers_PreviewMouseDoubleClick" IsSynchronizedWithCurrentItem="True"/>
                     </DockPanel>
 
                 </Grid>
@@ -131,7 +131,7 @@
                     <!--Right - Marker Panel-->
                     <DockPanel Grid.Column="1" Margin="25">
                         <TextBox DockPanel.Dock="Top" Margin="10" Foreground="{StaticResource TextBlockForecolorBrush}"  materialDesign:HintAssist.Hint="Search to Mark Attendance" TextChanged="TextBox_TextChanged_1" />
-                        <DataGrid x:Name="dGridStaff" DockPanel.Dock="Bottom" Margin="10" CanUserAddRows="False" PreviewKeyDown="dGridStaff_PreviewKeyDown"/>
+                        <DataGrid x:Name="dGridStaff" DockPanel.Dock="Bottom" Margin="10" CanUserAddRows="False" PreviewMouseDoubleClick="dGridStaff_PreviewMouseDoubleClick" IsSynchronizedWithCurrentItem="True"/>
                     </DockPanel>
 
 

@@ -10,6 +10,20 @@ namespace FitSystem.Database
         public FitDb() : base("FIT_db")
         { }
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            // Cofiuring the Relationship Employee-->Person with CASCADE ON DELETE
+            modelBuilder.Entity<Employee>()
+            .HasRequired(c => c.Person)
+            .WithRequiredDependent()
+            .WillCascadeOnDelete(true);
+
+            // Cofiuring the Relationship Member-->Person with CASCADE ON DELETE
+            modelBuilder.Entity<Member>()
+            .HasRequired(c => c.Person)
+            .WithRequiredDependent()
+            .WillCascadeOnDelete(true);
+        }
         public DbSet<Login> LoginSet { get; set; }
         public DbSet<LoginLog> LoginLogSet { get; set; }
         public DbSet<WorkRole> WorkRoleSet { get; set; }

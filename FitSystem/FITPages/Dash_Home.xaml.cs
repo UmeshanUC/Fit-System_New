@@ -92,28 +92,28 @@ namespace FitSystem.FITPages
             }
         }
 
-        private bool UpdatePerson(object affectedDGridObject)
+        private bool UpdatePerson(PersonForDashHome personForDashHome)
         {
-            var selectedRecord = (affectedDGridObject as DataGrid)?.SelectedItem as PersonForDashHome;
-            string recordNIC = selectedRecord?.NIC;
-            if (recordNIC is null)
+            if (personForDashHome is null)
             {
-                ErrorService.ShowError("No NIC error");
+                ErrorService.ShowError("No record to update. Error");
                 return false;
             }
+
             using (FitDb db = new FitDb())
             {
-                var record = db.PersonSet.Find(recordNIC);
+                var record = db.PersonSet.Find(personForDashHome.NIC);
 
                 try
                 {
                     db.PersonSet.Attach(record);
-                    record.TodayPresence = selectedRecord.TodayPresence;
+                    record.TodayPresence = personForDashHome.TodayPresence;
                     db.SaveChanges();
+                    Global.RefreshDataGlobally();
                     return true;
 
                 }
-                catch (Exception ex)
+                catch
                 {
                     ErrorService.ShowError("Error in updating attendance");
                     return false;
@@ -136,38 +136,71 @@ namespace FitSystem.FITPages
             {
                 foreach (var col in dGridMembers.Columns)
                 {
-                    if (col.DisplayIndex != 2) col.IsReadOnly = true;
+                    col.IsReadOnly = true;
                 }
             }
         }
 
         private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
         {
-            dGridMembers.ItemsSource = null;
+            dGridStaff.ItemsSource = null;
             var result = SearchStaff(((TextBox)sender).Text);
-            dGridMembers.ItemsSource = result;
+            dGridStaff.ItemsSource = result;
             if (!(result is null))
             {
                 foreach (var col in dGridStaff.Columns)
                 {
-                    if (col.DisplayIndex != 2) col.IsReadOnly = true;
+                    col.IsReadOnly = true;
                 }
             }
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void MarkAttendance(object sender)
         {
+            PersonForDashHome personForDashHome = (sender as DataGrid).SelectedItem as PersonForDashHome;
+
+            if (personForDashHome is null)
+            {
+                ErrorService.ShowError("Not Person Selected");
+                return;
+            }
+
+            //Toggling Attendance
+            personForDashHome.TodayPresence = !personForDashHome.TodayPresence;
+
+            if (!UpdateDGrid(sender, personForDashHome))
+            {
+                ErrorService.ShowError("Error updating DataGrid");
+                return;
+            }
+
+            UpdatePerson(personForDashHome);
         }
 
-        private void dGridMembers_PreviewKeyDown(object sender, KeyEventArgs e)
+        private bool UpdateDGrid(object DGridAsObject, PersonForDashHome newRecord)
         {
-            UpdatePerson(sender);
+            DataGrid dataGrid = DGridAsObject as DataGrid;
+
+            List<PersonForDashHome> personForDashHomeList = dataGrid?.ItemsSource as List<PersonForDashHome>;
+
+            // Replacing New record
+            personForDashHomeList?.Where(old => old.NIC != newRecord.NIC)?.ToList()?.Add(newRecord);
+
+            dataGrid.ItemsSource = null;
+            dataGrid.ItemsSource = personForDashHomeList;
+
+            return !(personForDashHomeList is null);
+        }
+
+        private void dGridMembers_PreviewMouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            MarkAttendance(sender);
 
         }
 
-        private void dGridStaff_PreviewKeyDown(object sender, KeyEventArgs e)
+
+        private void dGridStaff_PreviewMouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            UpdatePerson(sender);
+            MarkAttendance(sender);
         }
     }
 }
