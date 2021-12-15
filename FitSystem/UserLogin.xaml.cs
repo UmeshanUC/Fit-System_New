@@ -1,6 +1,7 @@
 ﻿using FitSystem;
 using FitSystem.Database;
 using FitSystem.Models;
+using FITSystem;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -95,6 +96,12 @@ namespace FitSystem
                 {
                     case 0:
                         Navigate<DashB>();
+                        break;
+                    case 1:
+                        Navigate<Trainer_window>();
+                        break;
+                    case 2:
+                        Navigate<memberdashboard>();
                         break;
 
                     default:

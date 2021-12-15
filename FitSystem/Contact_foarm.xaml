@@ -1,0 +1,62 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FITSystem"
+        xmlns:FITControls="clr-namespace:FitSystem.FITControls" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="FITSystem.Contact_foarm"
+        mc:Ignorable="d"
+        Title="Contact_foarm" Height="784" Width="1286">
+    <Grid Background="#FF1B1B20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="57*"/>
+            <RowDefinition Height="125*"/>
+            <RowDefinition Height="498*"/>
+            <RowDefinition Height="75*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="99*"/>
+            <ColumnDefinition Width="694*"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Column="1" HorizontalAlignment="Left" Margin="0,0.2,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.RowSpan="2" Width="1120" Height="125">
+            <TextBox FontSize="18" Background="#FF323232" Foreground="#FFB1B1B1" Height="115" TextWrapping="Wrap" Text="If you have any question or problems or you need technical support send us mail&#xA;fitness@gmail.com&#xA;For questions regarding ordering program send us mail:&#xA;salesatfitness@gmail.com&#xA;" Width="1125" TextChanged="TextBox_TextChanged"/>
+        </Label>
+
+
+        <FITControls:FitTitleBar HorizontalAlignment="Left" Height="100" Grid.RowSpan="2" VerticalAlignment="Top" Width="100"/>
+        <FITControls:FitTitleBar HorizontalAlignment="Left" Height="57" Grid.RowSpan="2" VerticalAlignment="Top" Width="1280" Grid.ColumnSpan="2"/>
+        <Label Foreground="#FFB1B1B1" Content="If you have want to suggest a feature, report a bug, ask a general question, question about order etc.... you can use the form below" Grid.Column="1" HorizontalAlignment="Left" Margin="0,0.4,0,0" Grid.Row="2" VerticalAlignment="Top" Width="1110" Height="26"/>
+        <Label Foreground="#FFB1B1B1" Content="Contact form" FontSize="20" Grid.Column="1" HorizontalAlignment="Left" Height="40" Margin="0,31.4,0,0" Grid.Row="2" VerticalAlignment="Top" Width="139"/>
+        <Label Foreground="#FFB1B1B1" Content="Leave us your contact details and we will get in touch with you soon" Grid.Column="1" HorizontalAlignment="Left" Margin="0,76.4,0,0" Grid.Row="2" VerticalAlignment="Top" Width="382" Height="26"/>
+        <Label Foreground="#FFB1B1B1" Content="Subject" Grid.Column="1" HorizontalAlignment="Left" Margin="0,107.4,0,0" Grid.Row="2" VerticalAlignment="Top" Width="71" Height="26"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="0,133.4,0,0" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="24" Width="780">
+            <TextBlock.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF383838" Offset="0"/>
+                    <GradientStop Color="#FF626262" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Background>
+        </TextBlock>
+        <Label Foreground="#FFB1B1B1" Content="Email" Grid.Column="1" HorizontalAlignment="Left" Margin="0,184.4,0,0" Grid.Row="2" VerticalAlignment="Top" Width="71" Height="26"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="0,210.4,0,0" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="27" Width="780">
+            <TextBlock.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF383838" Offset="0"/>
+                    <GradientStop Color="#FF626262" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Background>
+        </TextBlock>
+        <Label Foreground="#FFB1B1B1" Content="Message" Grid.Column="1" HorizontalAlignment="Left" Margin="0,267.4,0,0" Grid.Row="2" VerticalAlignment="Top" Width="71" Height="26"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="0,298.4,0,0" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="197" Width="780">
+            <TextBlock.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF383838" Offset="0"/>
+                    <GradientStop Color="#FF626262" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Background>
+        </TextBlock>
+        <Button Content="submit" Grid.Column="1" HorizontalAlignment="Left" Height="33" Margin="259,9.8,0,0" Grid.Row="3" VerticalAlignment="Top" Width="289"/>
+
+
+    </Grid>
+</Window>
