@@ -345,6 +345,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="memberdashboard.jpg" />
     <Resource Include="imgs\avatar_dark.png" />
     <Resource Include="imgs\avatar_light.png" />
     <Resource Include="imgs\payment logos.png" />

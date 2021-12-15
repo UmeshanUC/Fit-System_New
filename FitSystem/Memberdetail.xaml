@@ -3,30 +3,34 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:FITSystem"
+        xmlns:local="clr-namespace:FITSystem" xmlns:FITControls="clr-namespace:FitSystem.FITControls"
         mc:Ignorable="d"
+        WindowStyle="None"
         Title="Memberdetail" Height="450" Width="800">
-    <Grid Background="#FF1B1B20" Margin="0,0,-6.4,-3">
-        <Grid Margin="0,0,0.2,0" Height="335" VerticalAlignment="Top">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Label x:Name="nic_" Content="NIC" HorizontalAlignment="Left" Margin="385,41,0,0" VerticalAlignment="Top" Background="#FF626262" Width="71"  Foreground="#FFB1B1B1" />
-            <Label x:Name="t_name" Content="Name" HorizontalAlignment="Left" Margin="0,41,0,0" VerticalAlignment="Top" Background="#FF626262" Width="71" Foreground="#FFB1B1B1" />
-            <Label x:Name="gender" Content="Gender" HorizontalAlignment="Left" Margin="0,111,0,0" VerticalAlignment="Top" Background="#FF626262" Width="71" Foreground="#FFB1B1B1" />
-            <Label x:Name="email" Content="E-mail" HorizontalAlignment="Left" Margin="385,111,0,0" VerticalAlignment="Top" Background="#FF626262" Width="71" Foreground="#FFB1B1B1" />
-            <Label x:Name="textaddress" Content="Address" HorizontalAlignment="Left" Margin="0,173,0,0" VerticalAlignment="Top" Background="#FF626262" Width="71" Foreground="#FFB1B1B1" />
-            <Label x:Name="tele" Content="TP Num" HorizontalAlignment="Left" Margin="385,173,0,0" VerticalAlignment="Top" Background="#FF626262" Width="71" Foreground="#FFB1B1B1" />
-            <Button Content="close" HorizontalAlignment="Left" Margin="360,259,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-            <TextBox x:Name="text_name" HorizontalAlignment="Left" Height="26" Margin="85,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="264" Foreground="#FFB1B1B1" Background="{x:Null}" BorderBrush="{x:Null}" />
-            <TextBox x:Name="text_gender" HorizontalAlignment="Left" Height="26" Margin="85,111,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="264" Foreground="#FFB1B1B1" Background="{x:Null}" BorderBrush="{x:Null}"/>
-            <TextBox x:Name="text_address" HorizontalAlignment="Left" Height="26" Margin="85,173,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="264" Foreground="#FFB1B1B1" Background="{x:Null}" BorderBrush="{x:Null}"/>
-            <TextBox x:Name="text_nic" HorizontalAlignment="Left" Height="26" Margin="461,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="264" Foreground="#FFB1B1B1" Background="{x:Null}" BorderBrush="{x:Null}"/>
-            <TextBox x:Name="text_mail" HorizontalAlignment="Left" Height="26" Margin="461,110,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="264" Foreground="#FFB1B1B1" Background="{x:Null}" BorderBrush="{x:Null}"/>
-            <TextBox x:Name="text_tp" HorizontalAlignment="Left" Height="26" Margin="461,172,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="264" Foreground="#FFB1B1B1" Background="{x:Null}" BorderBrush="{x:Null}"/>
+    <DockPanel>
+        <FITControls:FitTitleBar Title="Profile" DockPanel.Dock="Top"/>
+        <Grid Background="#FF1B1B20" Margin="0,0,-6.4,-3">
+            <Grid Margin="0,0,0.2,0" Height="335" VerticalAlignment="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="nic_" Content="NIC" HorizontalAlignment="Left" Margin="385,41,0,0" VerticalAlignment="Top" Background="#FF626262" Width="71"  Foreground="#FFB1B1B1" />
+                <Label x:Name="t_name" Content="Name" HorizontalAlignment="Left" Margin="0,41,0,0" VerticalAlignment="Top" Background="#FF626262" Width="71" Foreground="#FFB1B1B1" />
+                <Label x:Name="gender" Content="Gender" HorizontalAlignment="Left" Margin="0,111,0,0" VerticalAlignment="Top" Background="#FF626262" Width="71" Foreground="#FFB1B1B1" />
+                <Label x:Name="email" Content="E-mail" HorizontalAlignment="Left" Margin="385,111,0,0" VerticalAlignment="Top" Background="#FF626262" Width="71" Foreground="#FFB1B1B1" />
+                <Label x:Name="textaddress" Content="Address" HorizontalAlignment="Left" Margin="0,173,0,0" VerticalAlignment="Top" Background="#FF626262" Width="71" Foreground="#FFB1B1B1" />
+                <Label x:Name="tele" Content="TP Num" HorizontalAlignment="Left" Margin="385,173,0,0" VerticalAlignment="Top" Background="#FF626262" Width="71" Foreground="#FFB1B1B1" />
+                <Button Content="close" HorizontalAlignment="Left" Margin="360,259,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+                <TextBox x:Name="text_name" HorizontalAlignment="Left" Height="26" Margin="85,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="264" Foreground="#FFB1B1B1" Background="{x:Null}" BorderBrush="{x:Null}" />
+                <TextBox x:Name="text_gender" HorizontalAlignment="Left" Height="26" Margin="85,111,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="264" Foreground="#FFB1B1B1" Background="{x:Null}" BorderBrush="{x:Null}"/>
+                <TextBox x:Name="text_address" HorizontalAlignment="Left" Height="26" Margin="85,173,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="264" Foreground="#FFB1B1B1" Background="{x:Null}" BorderBrush="{x:Null}"/>
+                <TextBox x:Name="text_nic" HorizontalAlignment="Left" Height="26" Margin="461,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="264" Foreground="#FFB1B1B1" Background="{x:Null}" BorderBrush="{x:Null}" TextChanged="text_nic_TextChanged"/>
+                <TextBox x:Name="text_mail" HorizontalAlignment="Left" Height="26" Margin="461,110,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="264" Foreground="#FFB1B1B1" Background="{x:Null}" BorderBrush="{x:Null}"/>
+                <TextBox x:Name="text_tp" HorizontalAlignment="Left" Height="26" Margin="461,172,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="264" Foreground="#FFB1B1B1" Background="{x:Null}" BorderBrush="{x:Null}"/>
 
+
+            </Grid>
 
         </Grid>
-
-    </Grid>
+    </DockPanel>
 </Window>

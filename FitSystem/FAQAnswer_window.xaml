@@ -3,21 +3,24 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:FITSystem"
+        xmlns:local="clr-namespace:FITSystem" xmlns:FITControls="clr-namespace:FitSystem.FITControls"
         mc:Ignorable="d"
+        WindowStyle="None"
         Title="FAQAnswer_window" Height="450" Width="800">
-    <ScrollViewer HorizontalScrollBarVisibility="Auto">
-        <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Height="1582" Width="784">
-            <Label  FontWeight="ExtraBold" Foreground="#FFB1B1B1" Content="FAQ" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-3,3,0,0" Width="777" Height="31">
-                <Label.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FF383838" Offset="0"/>
-                        <GradientStop Color="#FF626262" Offset="1"/>
-                    </LinearGradientBrush>
-                </Label.Background>
-            </Label>
-            <Label FontWeight="Bold" Background="#FF323232" Foreground="#FFB1B1B1" Content="1.I have download program. How to login for the first time?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-3,34,0,-29" Width="777"/>
-            <TextBox  Foreground="#FFB1B1B1"  Background="#FF1B1B20" HorizontalAlignment="Left" Height="64" Margin="-3,58,0,0" TextWrapping="Wrap" Text="
+    <DockPanel>
+        <FITControls:FitTitleBar Title="FAQ Answers" DockPanel.Dock="Top"/>
+        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+            <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Height="1582" Width="784">
+                <Label  FontWeight="ExtraBold" Foreground="#FFB1B1B1" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,-2,0,0" Width="774" Height="36">
+                    <Label.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF383838" Offset="0"/>
+                            <GradientStop Color="#FF626262" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Label.Background>
+                </Label>
+                <Label FontWeight="Bold" Background="#FF323232" Foreground="#FFB1B1B1" Content="1.I have download program. How to login for the first time?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-3,34,0,-29" Width="777"/>
+                <TextBox  Foreground="#FFB1B1B1"  Background="#FF1B1B20" HorizontalAlignment="Left" Height="64" Margin="-3,58,0,0" TextWrapping="Wrap" Text="
 
 Start FM. On the first FM screen just click Try button instead Register to start a free trial. The only the limitation in trial versions is that you can add up to 10 members. There are no other limitations.
 
@@ -29,8 +32,8 @@ password: admin
 
 Be sure to use lowercase letters.
 " VerticalAlignment="Top" Width="777"/>
-            <Label  FontWeight="Bold" Background="#FF323232" Foreground="#FFB1B1B1" Content="2.How to Upgrade from Basic to Plus" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-3,122,0,0" Width="777"/>
-            <TextBox  Foreground="#FFB1B1B1"  Background="#FF1B1B20" HorizontalAlignment="Left" Height="64" Margin="-3,146,0,-181" TextWrapping="Wrap" Text="
+                <Label x:Name="label2"  FontWeight="Bold" Background="#FF323232" Foreground="#FFB1B1B1" Content="2.How to Upgrade from Basic to Plus" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-3,122,0,0" Width="777"/>
+                <TextBox  Foreground="#FFB1B1B1"  Background="#FF1B1B20" HorizontalAlignment="Left" Height="64" Margin="-3,146,0,-181" TextWrapping="Wrap" Text="
 First contact us to get payment link for upgrade.
 When payment is confirmed we will send you serial number for upgrade.
 After that just install FM PLUS to overwrite FM BASIC. Do not uninstall previous version because you could delete your database. Installation of new version will not overwrite your database, but just in case before you begin, we recommend to backup your database.
@@ -38,26 +41,27 @@ When you have FM PLUS installed enter the serial number we have sent you.
 
 The same procedure applies also to upgrades from FM BASIC to FM PLUS DAC or from FM PLUS to FM PLUS DAC.  
 " VerticalAlignment="Top" Width="777"/>
-            <Label FontWeight="Bold" Background="#FF323232" Foreground="#FFB1B1B1" Content="3.Deactivation Procedure" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-3,210,0,-205" Width="777"/>
-            <TextBox  Foreground="#FFB1B1B1"  Background="#FF1B1B20" HorizontalAlignment="Left" Height="64" Margin="-3,234,0,-269" TextWrapping="Wrap" Text="1. Start  Fitness Manager as administrator. To do that right click on Fitness Manager shortcut on your desktop and select Run as administrator in context menu options
+                <Label FontWeight="Bold" Background="#FF323232" Foreground="#FFB1B1B1" Content="3.Deactivation Procedure" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-3,210,0,-205" Width="777"/>
+                <TextBox  Foreground="#FFB1B1B1"  Background="#FF1B1B20" HorizontalAlignment="Left" Height="64" Margin="-3,234,0,-269" TextWrapping="Wrap" Text="1. Start  Fitness Manager as administrator. To do that right click on Fitness Manager shortcut on your desktop and select Run as administrator in context menu options
 2. Go to Help->About. When About window opens, hold Ctrl and then press D.
 3. This will popup a window which will ask you to deactivate FM. Click OK and it will show you Deactivation code.
 4. Make a screenshot of deactivation code and send it to us. Also send us FM ID from your new PC so when we check deactivation code we will send you a new serial number." VerticalAlignment="Top" Width="777"/>
-            <Label FontWeight="Bold" Background="#FF323232" Foreground="#FFB1B1B1" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-3,940,0,0" Width="777"/>
-            <TextBox  Background="#FF1B1B20" Foreground="#FFB1B1B1" HorizontalAlignment="Left" Height="64" Margin="-3,322,0,-357" TextWrapping="Wrap" Text="Each computer on which Fitness Manager is working needs a license.
+                <Label FontWeight="Bold" Background="#FF323232" Foreground="#FFB1B1B1" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-3,940,0,0" Width="777"/>
+                <TextBox  Background="#FF1B1B20" Foreground="#FFB1B1B1" HorizontalAlignment="Left" Height="64" Margin="-3,322,0,-357" TextWrapping="Wrap" Text="Each computer on which Fitness Manager is working needs a license.
 If you want to connect multiple computers in one gym over LAN (local area network) to share the same data, one computer needs regular (server) license and other computers need client licenses." VerticalAlignment="Top" Width="777"/>
-            <Label FontWeight="Bold" Background="#FF323232" Foreground="#FFB1B1B1" Content="5.What is payment procedure." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-3,386,0,-381" Width="777"/>
-            <TextBox  Background="#FF1B1B20" Foreground="#FFB1B1B1" HorizontalAlignment="Left" Height="64" Margin="-3,411,0,0" TextWrapping="Wrap" Text="Start FM. On the first FM screen just click Try button instead Register to start a free trial. The only the limitation in trial versions is that you can add up to 10 members. There are no other limitations." VerticalAlignment="Top" Width="777"/>
-            <Label FontWeight="Bold" Background="#FF323232" Foreground="#FFB1B1B1" Content="6.The bill number already exists message shows up when trying to print new package reciept?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-3,485,0,0" Width="777"/>
-            <TextBox  Background="#FF1B1B20"  Foreground="#FFB1B1B1" HorizontalAlignment="Left" Height="64" Margin="-3,515,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="777"/>
-            <Label  FontWeight="Bold" Background="#FF323232" Foreground="#FFB1B1B1" Content="7.What is language editor?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,579,0,0" Width="777"/>
-            <TextBox  Background="#FF1B1B20" Foreground="#FFB1B1B1" HorizontalAlignment="Left" Height="64" Margin="-3,609,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="777"/>
-            <Label FontWeight="Bold" Background="#FF323232" Foreground="#FFB1B1B1" Content="8.What is registration procedure?" HorizontalAlignment="Left" Margin="-3,673,0,95" Width="777"/>
-            <TextBox   Background="#FF1B1B20" Foreground="#FFB1B1B1" HorizontalAlignment="Left" Height="64" Margin="-3,698,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="777"/>
-            <Label FontWeight="Bold" Background="#FF323232"  Foreground="#FFB1B1B1" Content="4.How to translate GYM management system to another language" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-3,298,0,0" Width="777"/>
+                <Label FontWeight="Bold" Background="#FF323232" Foreground="#FFB1B1B1" Content="5.What is payment procedure." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-3,386,0,-381" Width="777"/>
+                <TextBox  Background="#FF1B1B20" Foreground="#FFB1B1B1" HorizontalAlignment="Left" Height="64" Margin="-3,411,0,0" TextWrapping="Wrap" Text="Start FM. On the first FM screen just click Try button instead Register to start a free trial. The only the limitation in trial versions is that you can add up to 10 members. There are no other limitations." VerticalAlignment="Top" Width="777"/>
+                <Label FontWeight="Bold" Background="#FF323232" Foreground="#FFB1B1B1" Content="6.The bill number already exists message shows up when trying to print new package reciept?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-3,485,0,0" Width="777"/>
+                <TextBox  Background="#FF1B1B20"  Foreground="#FFB1B1B1" HorizontalAlignment="Left" Height="64" Margin="-3,515,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="777"/>
+                <Label  FontWeight="Bold" Background="#FF323232" Foreground="#FFB1B1B1" Content="7.What is language editor?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,579,0,0" Width="777"/>
+                <TextBox  Background="#FF1B1B20" Foreground="#FFB1B1B1" HorizontalAlignment="Left" Height="64" Margin="-3,609,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="777"/>
+                <Label FontWeight="Bold" Background="#FF323232" Foreground="#FFB1B1B1" Content="8.What is registration procedure?" HorizontalAlignment="Left" Margin="-3,673,0,95" Width="777"/>
+                <TextBox   Background="#FF1B1B20" Foreground="#FFB1B1B1" HorizontalAlignment="Left" Height="64" Margin="-3,698,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="777"/>
+                <Label FontWeight="Bold" Background="#FF323232"  Foreground="#FFB1B1B1" Content="4.How to translate GYM management system to another language" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-3,298,0,0" Width="777"/>
 
-        </Grid>
-    </ScrollViewer>
+            </Grid>
+        </ScrollViewer>
+    </DockPanel>
 
 
 </Window>

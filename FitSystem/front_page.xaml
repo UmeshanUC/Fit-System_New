@@ -11,7 +11,7 @@
     <Grid Background="#282930" Margin="0,0,-0.4,0">
 
         <FITControls:FitTitleBar Title="GYM MANAGEMENT SYSTEM" VerticalAlignment="Top"  Loaded="FitTitleBar_Loaded" ContentStringFormat=""/>
-        <Button Content="Register" HorizontalAlignment="Left" Margin="697,51,0,0" VerticalAlignment="Top" Width="97" Height="27" Click="Button_Click"/>
+        <Button Content="Register" HorizontalAlignment="Left" Margin="687,45,0,0" VerticalAlignment="Top" Width="97" Height="27" Click="Button_Click"/>
         <Button Content="Button" HorizontalAlignment="Left" Height="0" Margin="571,322,0,0" VerticalAlignment="Top" Width="5"/>
         <Button Content="Login" HorizontalAlignment="Left" Margin="336,340,0,0" VerticalAlignment="Top" Width="95" Height="41" Click="Button_Click_1"/>
         <StackPanel Grid.Column="0" Margin="10,105,0,77">

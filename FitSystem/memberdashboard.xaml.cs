@@ -26,13 +26,25 @@ namespace FITSystem
 
         private void SetNavBtnClickedStyle(object sender, RoutedEventArgs e)
         {
-            Memberdetail mem = new Memberdetail();
-            mem.ShowDialog();
+            Memberdetail detail = new Memberdetail();
+            detail.Show();
+            
         }
 
         private void frmDashWorkspace_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
         {
 
+        }
+
+        private void faq_button_Click(object sender, RoutedEventArgs e)
+        {
+            FAQ_window mem = new FAQ_window();
+            mem.ShowDialog();
+        }
+
+        private void back_btn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

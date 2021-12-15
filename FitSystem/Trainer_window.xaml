@@ -38,7 +38,7 @@
         </Grid>
 
 
-        <FITControls:FitTitleBar HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="1280"/>
+        <FITControls:FitTitleBar Title="Dashboard" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="1280"/>
         <Button Content="Get" HorizontalAlignment="Left" Margin="206,332,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
         <TextBox x:Name="text_nic" HorizontalAlignment="Left" Height="20" Margin="85,144,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="196" Foreground="#FFB1B1B1">
             <TextBox.Background>

@@ -41,5 +41,10 @@ namespace FITSystem
 
 
         }
+
+        private void text_nic_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+
+        }
     }
 }

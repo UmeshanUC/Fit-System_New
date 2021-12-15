@@ -29,5 +29,17 @@ namespace FITSystem
             Contact_foarm win = new Contact_foarm();
             win.Show();
         }
+
+        public static implicit operator FAQ_window(Memberdetail v)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            FAQAnswer_window answer = new FAQAnswer_window();
+            answer.Show();
+            this.Close();
+        }
     }
 }
