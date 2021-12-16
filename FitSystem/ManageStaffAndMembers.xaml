@@ -50,12 +50,10 @@
                         <Button Content="Edit" Margin="10 0 10 10" Click="Button_Click_1"/>
                         <Button Content="Remove" Margin="10 0 10 10" Click="Button_Click_3"/>
                         <Button Content="Email" Margin="10 0 10 10" Click="Button_Click_2"/>
-                        <Button Content="Call" Margin="10 0 10 10"/>
                     </StackPanel>
 
                     <StackPanel FlowDirection="RightToLeft" Orientation="Horizontal" Grid.ColumnSpan="2" Grid.Row="1">
                         <Button Content="Cancel" Margin="10 0" Width="70" Click="Button_Click_4"/>
-                        <Button Content="OK" Margin="10 0" Width="70"/>
                     </StackPanel>
                 </Grid>
             </DockPanel>

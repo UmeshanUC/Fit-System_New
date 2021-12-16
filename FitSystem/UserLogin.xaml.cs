@@ -118,7 +118,8 @@ namespace FitSystem
 
         private void BtnExit_OnClick(object sender, RoutedEventArgs e)
         {
-            App.Current.Shutdown();
+            //App.Current.Shutdown();
+            Close();
         }
 
         #endregion

@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FitSystem.FITControls"
-             mc:Ignorable="d" Height="18" VerticalContentAlignment="Top" Width="Auto"
+             mc:Ignorable="d"  VerticalContentAlignment="Top" Width="Auto"
              >
     <UserControl.Resources>
         <Style TargetType="MenuItem" x:Key="DarkItem" >
@@ -17,15 +17,15 @@
     </UserControl.Resources>
     <StackPanel Background="Transparent" Orientation="Horizontal">
         <Menu VerticalAlignment="Center" Background="Transparent">
-            <MenuItem Header="File" Foreground="White">
-                <MenuItem x:Name="miLogout" Style="{StaticResource DarkItem}" Header="Logout" Click="miLogout_Click"/>
+            <MenuItem Header="File" VerticalAlignment="Center" Foreground="White" Style="{StaticResource MaterialDesignMenuItem}">
+                <MenuItem x:Name="miLogout"  Style="{StaticResource DarkItem}" Header="Logout" Click="miLogout_Click"/>
                 <MenuItem x:Name="miExit" Style="{StaticResource DarkItem}"  Header="Exit" Click="miExit_Click"/>
             </MenuItem>
-            <MenuItem Header="Option" Foreground="White" AllowDrop="True">
+            <MenuItem Header="Option" VerticalAlignment="Center" Foreground="White" AllowDrop="True">
                 <MenuItem x:Name="miLog" Style="{StaticResource DarkItem}" Header="Log"/>
 
             </MenuItem>
-            <MenuItem Header="About" Foreground="White" FlowDirection="LeftToRight">
+            <MenuItem Header="About" VerticalAlignment="Center" Foreground="White" FlowDirection="LeftToRight">
                 <MenuItem x:Name="miHelp" Style="{StaticResource DarkItem}" Header="Help"/>
                 <MenuItem x:Name="miAbout" Style="{StaticResource DarkItem}" Header="About"/>
 

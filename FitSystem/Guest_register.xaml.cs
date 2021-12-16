@@ -40,6 +40,7 @@ namespace FITSystem
                 NIC = text_nic.Text,
                 Telephone = text_tele.Text,
                 Address = text_address.Text,
+                WorkRoleID = 2,
                 Pic = null,
             };
 

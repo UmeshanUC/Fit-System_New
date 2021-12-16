@@ -38,9 +38,9 @@ namespace FitSystem.Models
 
         #region NavigationProps
         public virtual WorkRole WorkRoles{ get; set; }
-        public virtual Login Login { get; set; }
-        public virtual Member Member{ get; set; }
-        public virtual Employee Employee{ get; set; }
+        //public virtual Login Login { get; set; }
+        //public virtual Member Member{ get; set; }
+        //public virtual Employee Employee{ get; set; }
         #endregion
 
     }

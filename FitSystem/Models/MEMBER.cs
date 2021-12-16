@@ -10,7 +10,7 @@ namespace FitSystem.Models
 {
     public class Member
     {
-        [Key][ForeignKey("Person")]
+        [Key]
         public string NIC { get; set; }
         public decimal Weight { get; set; }
         public decimal Height { get; set; }

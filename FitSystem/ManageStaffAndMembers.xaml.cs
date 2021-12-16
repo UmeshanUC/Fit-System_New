@@ -4,6 +4,7 @@ using FitSystem.Database;
 using FitSystem.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -58,7 +59,6 @@ namespace FitSystem
                 }
                 catch (Exception ex)
                 {
-
                     ErrorService.ShowError("Error occured. Not deleted ! \n" + ErrorService.MineErrorMsg(ex));
                 }
             }
@@ -141,7 +141,7 @@ namespace FitSystem
                 ErrorService.ShowError("Error occured when deleting. Not deleted !");
             }
             RemovePerson(person.NIC);
-            LoadGrid(Global.ManagingWorkRoleID);
+            Global.RefreshDataGlobally();
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)

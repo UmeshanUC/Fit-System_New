@@ -67,6 +67,7 @@ namespace FitSystem
                 }
                 loadedPerson.PicImage = Global.ByteArrayToBitmapImage(loadedPerson.Pic);
                 DataContext = loadedPerson;
+                imgPic.Source = loadedPerson.PicImage;
             }
         }
         #endregion
@@ -111,12 +112,40 @@ namespace FitSystem
                     db.SaveChanges();
 
                     AddMemberAndEmpRecords((DataContext as Person).NIC);
+
+                    Person person = DataContext as Person;
+                    CreateLogin(person.NIC, person.WorkRoleID, txtUsename.Text, txtPassword.Text);
+
                     Global.RefreshDataGlobally();
                     Close();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error occured during updating record\nDetail View:\n" + ErrorService.MineErrorMsg(ex));
+                }
+            }
+        }
+
+        private void CreateLogin(string NIC, int workRoleID, string username, string pword)
+        {
+            Login newLogin = new Login
+            {
+                NIC = NIC,
+                Username = username,
+                Passwd = pword,
+                PermissionLevel = workRoleID == 2 ? 2 : 1,
+
+            };
+            using (FitDb db = new FitDb())
+            {
+                try
+                {
+                    db.LoginSet.Add(newLogin);
+                    db.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+                    ErrorService.ShowError("Error in creating logins");
                 }
             }
         }
@@ -343,7 +372,7 @@ namespace FitSystem
 
         private void Image_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            Person dataContextAsPerson = (DataContext as Person);
+            Person dataContextAsPerson = DataContext as Person;
             string imagePath = Global.OpenImageFile();
             if (imagePath is null)
             {
@@ -359,6 +388,7 @@ namespace FitSystem
             dataContextAsPerson.Pic = ImageBArray;
 
             dataContextAsPerson.PicImage = Global.ByteArrayToBitmapImage(ImageBArray);
+            imgPic.Source = dataContextAsPerson.PicImage;
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)

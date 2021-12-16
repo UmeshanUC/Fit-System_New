@@ -23,11 +23,9 @@ namespace FitSystem.Classes
         public string CreateHTMLBody()
         {
             string Body1 = "<b>FIT Email !</b><h1>GYM SYSTEM</h1>";
-            Body1 += "<b><font size=\"4\" color=\"#044fbf\">";
-            string Body3 = "</font></b><br><b><font size=\"4\" color=\"read\">Urgent";
-            string Body4 = "<b><font size=\"4\" color=\"black\">FIT System</font></b><br><hr>";
-            Body4 += "<font size=\"1\" color=\"black\">Powered by FIT</font></b>";
-            return Body1 + Body3;
+            string Body2 = "</font></b><br><b><font size=\"4\" color=\"read\">Urgent";
+            string Body3 = $"<b><font size=\"1\" color=\"black\">${message}</font></b><br><hr>";
+            return Body1 + Body2 + Body3;
         }
 
         public void Send()

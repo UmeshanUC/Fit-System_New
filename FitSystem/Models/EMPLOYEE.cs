@@ -10,10 +10,10 @@ namespace FitSystem.Models
 {
     public class Employee
     {
-        [Key][ForeignKey("Person")]
+        [Key]
         public string NIC { get; set; }
         public string EpfNo { get; set; }
-        public int BankAccount { get; set; }
+        public long BankAccount { get; set; }
         public string OtherFacts { get; set; } //Qualifications or Describe Employee
         //Salary
         public decimal BaseSalary { get; set; }

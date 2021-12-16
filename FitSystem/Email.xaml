@@ -33,7 +33,7 @@
 
             <!--Total Space-->
             <DockPanel LastChildFill="True">
-                <!--Details-->
+                
                 <Border Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource RoundFrame}">
                     <DockPanel Margin="15 15 15 0">
                         <Grid DockPanel.Dock="Top">
@@ -78,12 +78,13 @@
                                          VerticalAlignment="Center"/>
                                 <TextBox Text="{Binding Recipient}" Style="{StaticResource InputH2_stackVertical}" Grid.Row="1" Margin="10 0" 
                                          VerticalAlignment="Center"/>
-                                <TextBox Text="{Binding Body}" Style="{StaticResource InputH2_stackVertical}" Grid.Row="2" Margin="10"/>
+                                <TextBox Text="{Binding Body}" Style="{StaticResource InputH2_stackVertical}" Grid.Row="2" Margin="10" 
+                                         VerticalContentAlignment="Top" Height="auto"/>
                             </Grid>
 
                             <StackPanel Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="1" Margin="5" Orientation="Horizontal" HorizontalAlignment="Center">
                                 <Button Content="Send" Padding="15 0" Margin="5 0" Height="auto" Click="Button_Click"/>
-                                <Button Content="Cancel" Padding="15 0" Margin="5 0" Height="auto"/>
+                                <Button Content="Cancel" Padding="15 0" Margin="5 0" Height="auto" Click="Button_Click_1"/>
                             </StackPanel>
                         </Grid>
 

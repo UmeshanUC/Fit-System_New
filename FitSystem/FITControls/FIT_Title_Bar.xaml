@@ -6,7 +6,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FitSystem.FITControls"
              xmlns:Controls="clr-namespace:FitSystem.FITControls"
-             mc:Ignorable="d" d:DesignWidth="1618.691" Height="40" >
+             mc:Ignorable="d" Height="45" >
     <Border CornerRadius="0 0 0 0" RenderTransformOrigin="0.5,0.5" Background="#FF1B1B20" BorderThickness="1">
         <Border.BorderBrush>
             <SolidColorBrush Color="#FFB9B9B9" Opacity="0.5"/>
@@ -19,12 +19,12 @@
                     <ColumnDefinition Width="30"/>
                 </Grid.ColumnDefinitions>
 
-                <DockPanel Grid.Column="0" Margin="20 0">
+                <DockPanel Grid.Column="0" Margin="20 0" VerticalAlignment="Center">
                     <TextBlock Text="{Binding Title}" Style="{StaticResource H1}"/>
                 </DockPanel>
 
-                <DockPanel Grid.Column="1">
-                    <Controls:MenuBar Margin="10 0 0 0"/>
+                <DockPanel Grid.Column="1" >
+                    <Controls:MenuBar Margin="0 0 20 0" />
                 </DockPanel>
 
                 <Button Margin="0" BorderBrush="Transparent"  Grid.Column="2"

@@ -23,6 +23,12 @@ namespace FitSystem.Database
             .HasRequired(c => c.Person)
             .WithRequiredDependent()
             .WillCascadeOnDelete(true);
+
+            // Cofiuring the Relationship Login-->Person with CASCADE ON DELETE
+            modelBuilder.Entity<Login>()
+            .HasRequired(c => c.Person)
+            .WithRequiredDependent()
+            .WillCascadeOnDelete(true);
         }
         public DbSet<Login> LoginSet { get; set; }
         public DbSet<LoginLog> LoginLogSet { get; set; }

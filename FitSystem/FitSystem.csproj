@@ -117,6 +117,7 @@
     <Compile Include="FITPages\Dash_finance.xaml.cs">
       <DependentUpon>Dash_finance.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FITPages\Dash_inventory.cs" />
     <Compile Include="front_page.xaml.cs">
       <DependentUpon>front_page.xaml</DependentUpon>
     </Compile>
@@ -136,9 +137,13 @@
     <Compile Include="Member_payment.xaml.cs">
       <DependentUpon>Member_payment.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202112151914137_init.cs" />
-    <Compile Include="Migrations\202112151914137_init.designer.cs">
-      <DependentUpon>202112151914137_init.cs</DependentUpon>
+    <Compile Include="Migrations\202112161736285_init.cs" />
+    <Compile Include="Migrations\202112161736285_init.designer.cs">
+      <DependentUpon>202112161736285_init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112161750244_long.cs" />
+    <Compile Include="Migrations\202112161750244_long.designer.cs">
+      <DependentUpon>202112161750244_long.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Profile.xaml.cs">
@@ -247,7 +252,6 @@
     <Compile Include="FITPages\Dash_Home.xaml.cs">
       <DependentUpon>Dash_Home.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FITPages\Dash_inventory.cs" />
     <Compile Include="FITPages\Dash_Staff.xaml.cs">
       <DependentUpon>Dash_Staff.xaml</DependentUpon>
     </Compile>
@@ -321,8 +325,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\202112151914137_init.resx">
-      <DependentUpon>202112151914137_init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202112161736285_init.resx">
+      <DependentUpon>202112161736285_init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112161750244_long.resx">
+      <DependentUpon>202112161750244_long.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

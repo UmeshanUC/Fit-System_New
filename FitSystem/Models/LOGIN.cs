@@ -10,8 +10,7 @@ namespace FitSystem.Models
 {
     public class Login
     {
-        [Key] [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        [ForeignKey("Person")]
+        [Key][DatabaseGenerated(DatabaseGeneratedOption.None)]
         public string NIC { get; set; }
         [Required]
         public string Username{ get; set; } 
@@ -21,7 +20,7 @@ namespace FitSystem.Models
         public int PermissionLevel { get; set; }
 
         #region NavigationProps
-        public virtual Person Person{ get; set; }
+        public virtual Person Person { get; set; }
         public virtual Permissions Permissions{ get; set; }
         #endregion
     }
