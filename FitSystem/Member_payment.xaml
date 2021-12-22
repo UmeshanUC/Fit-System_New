@@ -8,7 +8,7 @@
         WindowStyle="None"
         Title="Member_payment" Height="788.2" Width="1274.8">
     <DockPanel>
-        <Controls:FitTitleBar Title="Packages" DockPanel.Dock="Top"/>
+        <Controls:FitTitleBar Title="Packages" DockPanel.Dock="Top" MouseDown="FitTitleBar_MouseDown"/>
         <Grid Background="#FF1A1B20" Margin="0,0,0,0.2">
 
             <ListBox Margin="0,105,0,418.6" Background="#FF323232" >

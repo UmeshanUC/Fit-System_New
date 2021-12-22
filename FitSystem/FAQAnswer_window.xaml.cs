@@ -23,5 +23,10 @@ namespace FITSystem
         {
             InitializeComponent();
         }
+
+        private void FitTitleBar_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
     }
 }

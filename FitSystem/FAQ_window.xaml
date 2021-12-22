@@ -9,7 +9,7 @@
     WindowStyle="None"
         Title="FAQ_window" Height="784" Width="1286">
     <DockPanel>
-        <FITControls:FitTitleBar Title="FAQ" DockPanel.Dock="Top"/>
+        <FITControls:FitTitleBar Title="FAQ" DockPanel.Dock="Top" MouseDown="FitTitleBar_MouseDown" />
     <Grid Background="#FF1B1B20" >
         
         <Grid.ColumnDefinitions>

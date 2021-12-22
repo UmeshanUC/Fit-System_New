@@ -46,5 +46,10 @@ namespace FITSystem
         {
 
         }
+
+        private void FitTitleBar_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
     }
 }

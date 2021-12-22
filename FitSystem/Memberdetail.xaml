@@ -8,7 +8,7 @@
         WindowStyle="None"
         Title="Memberdetail" Height="450" Width="800">
     <DockPanel>
-        <FITControls:FitTitleBar Title="Profile" DockPanel.Dock="Top"/>
+        <FITControls:FitTitleBar Title="Profile" DockPanel.Dock="Top" MouseDown="FitTitleBar_MouseDown"/>
         <Grid Background="#FF1B1B20" Margin="0,0,-6.4,-3">
             <Grid Margin="0,0,0.2,0" Height="335" VerticalAlignment="Top">
                 <Grid.ColumnDefinitions>

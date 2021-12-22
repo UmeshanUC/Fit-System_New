@@ -9,7 +9,7 @@
         WindowStyle="None"
         Title="Guest_register" Height="450" Width="800">
     <DockPanel>
-        <Controls:FitTitleBar DockPanel.Dock="Top" Title="Registration Form"/>
+        <Controls:FitTitleBar DockPanel.Dock="Top" Title="Registration Form" MouseDown="FitTitleBar_MouseDown"/>
         <Grid Background="#FF1A1B20" Height="450" Width="800" DockPanel.Dock="Bottom">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
@@ -53,7 +53,7 @@
             <TextBox x:Name="text_passwrd" Grid.Column="5" HorizontalAlignment="Left" Margin="18.4,8.4,0,0" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White"/>
             <TextBox x:Name="text_tele" Grid.Column="2" HorizontalAlignment="Left" Margin="18.4,8.4,0,0" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White"/>
             <TextBox x:Name="text_confirmpasswrd" Grid.Column="5" HorizontalAlignment="Left" Margin="18.4,9.4,0,0" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White"/>
-            <TextBox x:Name="text_address" Grid.Column="2" HorizontalAlignment="Left" Margin="18.4,8.4,0,0" Grid.Row="4" TextWrapping="Wrap" Text="k" VerticalAlignment="Top" Width="208" Height="127" Foreground="#FFCE9B9B" Background="White" Grid.RowSpan="3"/>
+            <TextBox x:Name="text_address" Grid.Column="2" HorizontalAlignment="Left" Margin="18.4,8.4,0,0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="208" Height="127" Foreground="#FFCE9B9B" Background="White" Grid.RowSpan="3"/>
             <TextBox x:Name="text_height" Grid.Column="5" HorizontalAlignment="Left" Margin="18.4,9.4,0,0" Grid.Row="4" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White"/>
             <TextBox x:Name="text_weight" Grid.Column="5" HorizontalAlignment="Left" Margin="18.4,9.4,0,0" Grid.Row="5" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White"/>
             <TextBox x:Name="text_gender" Grid.Column="5" HorizontalAlignment="Left" Margin="18.4,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White"/>

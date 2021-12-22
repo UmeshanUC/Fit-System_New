@@ -49,7 +49,7 @@ namespace FITSystem
             {
                 NIC = text_nic.Text,
                 Username = text_username.Text,
-                Passwd = text_username.Text,
+                Passwd = text_passwrd.Text,
                 PermissionLevel = 2,
             };
 
@@ -68,6 +68,11 @@ namespace FITSystem
             db.MemberSet.Add(member);
             db.SaveChanges();
 
+        }
+
+        private void FitTitleBar_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            DragMove();
         }
     }
 }

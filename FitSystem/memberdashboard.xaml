@@ -23,7 +23,7 @@
 
             <!--TitleBar-->
             <StackPanel Orientation="Vertical" Margin="0" DockPanel.Dock="Top">
-                <Controls:FitTitleBar Title="Dashboard" DockPanel.Dock="Top">
+                <Controls:FitTitleBar Title="Dashboard" DockPanel.Dock="Top" MouseDown="FitTitleBar_MouseDown">
                     <Controls:FitTitleBar.Background>
                         <RadialGradientBrush>
                             <GradientStop Color="Black" Offset="0"/>

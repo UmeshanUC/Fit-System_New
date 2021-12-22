@@ -15,7 +15,7 @@ namespace FitSystem
 {
     public static class Global
     {
-        public static string logusernic = "079876567v";
+        public static string logusernic = "123456v";
 
         #region Callback Funtions
         public delegate void RefreshCallBack();

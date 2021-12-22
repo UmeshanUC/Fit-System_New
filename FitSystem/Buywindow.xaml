@@ -10,7 +10,7 @@
 
 
     <DockPanel>
-        <FITControls:FitTitleBar Title="Payment" DockPanel.Dock="Top"/>
+        <FITControls:FitTitleBar Title="Payment" DockPanel.Dock="Top" MouseDown="FitTitleBar_MouseDown"/>
         <Grid Background="#282930">
             <Grid Margin="0,0,-0.4,301">
 

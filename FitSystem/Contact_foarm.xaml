@@ -23,7 +23,7 @@
             <TextBox FontSize="18" Background="#FF323232" Foreground="#FFB1B1B1" Height="115" TextWrapping="Wrap" Text="If you have any question or problems or you need technical support send us mail&#xA;fitness@gmail.com&#xA;For questions regarding ordering program send us mail:&#xA;salesatfitness@gmail.com&#xA;" Width="1125" TextChanged="TextBox_TextChanged"/>
         </Label>
 
-        <FITControls:FitTitleBar Title="Contact Us"  Grid.RowSpan="1" VerticalAlignment="Top"  Grid.ColumnSpan="2"/>
+        <FITControls:FitTitleBar Title="Contact Us"  Grid.RowSpan="1" VerticalAlignment="Top"  Grid.ColumnSpan="2" MouseDown="FitTitleBar_MouseDown"/>
         <Label Foreground="#FFB1B1B1" Content="If you have want to suggest a feature, report a bug, ask a general question, question about order etc.... you can use the form below" Grid.Column="1" HorizontalAlignment="Left" Margin="0,0.4,0,0" Grid.Row="2" VerticalAlignment="Top" Width="1110" Height="26"/>
         <Label Foreground="#FFB1B1B1" Content="Contact form" FontSize="20" Grid.Column="1" HorizontalAlignment="Left" Height="40" Margin="0,31.4,0,0" Grid.Row="2" VerticalAlignment="Top" Width="139"/>
         <Label Foreground="#FFB1B1B1" Content="Leave us your contact details and we will get in touch with you soon" Grid.Column="1" HorizontalAlignment="Left" Margin="0,76.4,0,0" Grid.Row="2" VerticalAlignment="Top" Width="382" Height="26"/>

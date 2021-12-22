@@ -8,7 +8,7 @@
         WindowStyle="None"
         Title="FAQAnswer_window" Height="450" Width="800">
     <DockPanel>
-        <FITControls:FitTitleBar Title="FAQ Answers" DockPanel.Dock="Top"/>
+        <FITControls:FitTitleBar Title="FAQ Answers" DockPanel.Dock="Top" MouseDown="FitTitleBar_MouseDown"/>
         <ScrollViewer HorizontalScrollBarVisibility="Auto">
             <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Height="1582" Width="784">
                 <Label  FontWeight="ExtraBold" Foreground="#FFB1B1B1" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,-2,0,0" Width="774" Height="36">
